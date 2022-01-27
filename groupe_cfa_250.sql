@@ -1,6 +1,6 @@
 drop database if exists groupe_cfa_250;
 create database groupe_cfa_250;
-use database groupe_cfa_250;
+use database groupe_cfa_250
 
 create table etudiant(
     idetudiant int(3) not null auto_increment,
@@ -10,9 +10,7 @@ create table etudiant(
     email varchar(50) not null,
     mdp varchar(50) not null,
     tel varchar(50),
-    primary key (idetudiant),
-    foreign key(idprofesseur) references professeur(idprofesseur),
-    foreign key(idclasse) references classe(idclasse)
+    primary key (idetudiant)
 );
 
 create table classe(
@@ -22,9 +20,9 @@ create table classe(
     email varchar(50) not null,
     tel varchar(50),
     promo varchar(50) not null,
+    idetudiant int(3) not null,
     primary key (idclasse),
-    foreign key(idetudiant) references etudiant(idetudiant),
-    foreign key(idprofesseur) references professeur(idprofesseur)
+    foreign key(idetudiant) references etudiant(idetudiant)
 );
 
 create table professeur(
@@ -36,8 +34,9 @@ create table professeur(
     email varchar(50) not null,
     mdp varchar(50) not null,
     tel varchar(50),
-    primary key (idetudiant),
+    primary key (idprofesseur),
     foreign key(idclasse) references classe(idclasse)
+    foreign key(idetudiant) references etudiant(idetudiant)
 );
 
 create table matiere(
