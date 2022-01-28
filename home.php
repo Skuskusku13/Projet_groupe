@@ -1,7 +1,7 @@
 </br>
 <h3>Accueil du site</h3>
 </br>
-<img src="images/logo.png" height="200" width="200">
+<img style="object-fit: cover; background-color: black; padding: 10px; border-radius: 10px;" src="images/logo.png" height="200" width="auto">
 
 </br>
 </br>
