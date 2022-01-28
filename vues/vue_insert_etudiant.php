@@ -29,13 +29,19 @@
         <tr>
             <td class="align-middle text-center">Mot de passe Etudiant :</td>
             <td>
-                <input type="text" name="mdp" value="<?php if($lEtudiant != null) echo $lEtudiant['mdp']; ?>">
+                <input type="password" name="mdp" value="<?php if($lEtudiant != null) echo $lEtudiant['mdp']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Téléphone Etudiant :</td>
             <td>
-                <input type="password" name="tel" value="<?php if($lEtudiant != null) echo $lEtudiant['tel']; ?>">
+                <input type="text" name="tel" value="<?php if($lEtudiant != null) echo $lEtudiant['tel']; ?>">
+            </td>
+        </tr>
+        <tr>
+            <td class="align-middle text-center">Id Classe Etudiant :</td>
+            <td>
+                <input type="text" name="tel" value="<?php if($lEtudiant != null) echo $lEtudiant['tel']; ?>">
             </td>
         </tr>
         <?php 
@@ -47,11 +53,11 @@
             </td>
             <td class="align-middle text-center">
                 <input type="submit"    <?php
-                if ($lEtudiant != null) {
+                 if ($lEtudiant != null) {
                     echo 'name = "Modifier" value = "Modifier"';
                 } else {
                     echo 'name = "Valider" value = "Valider"';
-                }
+                } 
                 ?> >
             </td>
         </tr>
