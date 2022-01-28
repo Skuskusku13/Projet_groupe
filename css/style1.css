@@ -28,6 +28,9 @@ ul a {
 .navigation_navbar {
     background-color: midnightblue;
     color: #f1f1f1;
+    position: fixed; 
+    width:100%; 
+    padding: 15px;
 }
 
 .navigation_navbar a {

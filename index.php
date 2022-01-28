@@ -20,7 +20,7 @@ require_once("fonctions/fonctions.php");
 </head>
 
 <body>
-    <div style="position: fixed; width:100%; padding: 15px;" class="navigation_navbar">
+    <div class="navigation_navbar">
         <div class="d-flex justify-content-evenly">
             <a href="index.php?page=0">
                 <i class="fas fa-home"></i>Accueil
