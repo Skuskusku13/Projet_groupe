@@ -4,13 +4,16 @@
 </br>
 
 <?php
+
+ $lesEtudiants = null;
  $lEtudiant = null;
+ $lesClasses = selectAllClasses();
  if (isset($_GET['action']) && isset($_GET['idetudiant'])){
     $action = $_GET['action'];
     $idetudiant = $_GET['idetudiant'];
-  /*  if ($action == "vehicule"){
-        $lesEtudiants = selectVehiculesClients($idetudiant);
-    } */
+   if ($action == "classe"){
+        $lesEtudiants = selectClassesEtudiants($idetudiant);
+    } 
 }
 
     // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
@@ -25,9 +28,9 @@
                 case 'edit' :
                     $lEtudiant = selectWhereEtudiant($idetudiant);
                     break;
-               /* case 'vehicule' :
-                    $lesVehicules = selectVehiculesClients($idetudiant);
-                    break; */
+                case 'classe' :
+                    $lesEtudiants = selectClassesEtudiants($idetudiant);
+                    break; 
             }
         }
         require_once ("vues/vue_insert_etudiant.php");
@@ -55,9 +58,9 @@
     require_once ("vues/vue_les_etudiants.php");
 
     echo "<br /> <br />";
-    /* if ($lesVehicules != null)
+    if ($lesClasses != null)
     {
-        echo "<h2>Listes des véhicules du client : </h2>";
-        require_once ("vues/vue_les_vehicules_clients.php");
-    } */
+        echo "<h2>Listes des classes de l'étudiant : </h2>";
+        require_once ("vues/vue_les_classes_etudiants.php");
+    }
 ?>

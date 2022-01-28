@@ -13,6 +13,105 @@
 
 // ******************* Classes *********************
 
+function selectAllClasses (){
+    $requete = "select * from classe; ";
+    $con = connexion();
+    if ($con){
+
+        $lesClasses = mysqli_query($con, $requete);
+           // var_dump($lesClients);
+    }
+    else{
+        return null;
+    }
+    deconnexion($con);
+    return $lesClasses;
+}
+function selectClassesEtudiants($idclasse) {
+    $requete = "select * from etudiant where idclasse =" .$idclasse;
+    $con = connexion();
+    if ($con){
+
+        $lesClasses = mysqli_query($con, $requete);
+           // var_dump($lesClients);
+    }
+    else{
+        return null;
+    }
+    deconnexion($con);
+    return $lesClasses;
+}
+
+function insertClasse ($tab){
+    $requete = "insert into classe values(null,'".$tab['nomClasse']."','".$tab['salle']."','".$tab['diplome']."', '".$tab['nbEtudiants']."');" ;
+    // echo $requete;
+    $con = connexion ();
+    if ($con)
+    {
+        mysqli_query($con, $requete);
+    }
+    deconnexion($con);
+}
+function deleteClasse ($idclasse){
+    $requete = "delete from classe where idclasse = ".$idclasse;
+    // echo $requete;
+    $con = connexion ();
+    if ($con)
+    {
+        mysqli_query($con, $requete);
+    }
+    deconnexion($con);
+}
+function selectWhereClasse($idclasse){
+    $requete = "select * from classe where idclasse = " .$idclasse;
+    $con = connexion();
+    if ($con){
+
+        $lesClasses = mysqli_query($con, $requete);
+        $uneClasse = mysqli_fetch_assoc($lesClasses);
+    }
+    else{
+        return null;
+    }
+    deconnexion($con);
+    return $uneClasse;
+}
+function updateClasse ($tab){
+    $requete = "update classe set nomClasse = '".$tab['nomClasse'] ."', salle = '".$tab['salle'] ."', diplome = '".$tab['diplome'] ."', nbEtudiants = '".$tab['nbEtudiants'] ."' where idclasse = ".$tab['idclasse'];
+     // echo $requete;
+    $con = connexion ();
+    if ($con)
+    {
+        mysqli_query($con, $requete);
+    }
+    deconnexion($con);
+}
+function searchClasse ($mot){
+    $requete = "select * from classe where nomClasse like '%".$mot."%' or salle like '%".$mot."%' or diplome like '%".$mot."%' or nbEtudiants like '%".$mot."%'; ";
+    $con = connexion();
+    if ($con){
+
+        $lesClasses = mysqli_query($con, $requete);
+    }
+    else{
+        return null;
+    }
+    deconnexion($con);
+    return $lesClasses;
+}
+function countClasses (){
+    $requete = "select count(*) as nb from classe ;";
+    $con = connexion();
+    if ($con)
+    {
+        $resultat = mysqli_query($con, $requete);
+        $nb = mysqli_fetch_assoc($resultat);
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $nb["nb"];
+}
 
 // ******************* Etudiants *********************
 
@@ -31,7 +130,7 @@ function selectAllEtudiants (){
     return $lesEtudiants;
 }
 function insertEtudiant ($tab){
-    $requete = "insert into etudiant values(null,'".$tab['nom']."','".$tab['prenom']."','".$tab['adresse']."', '".$tab['email']."', '".$tab['mdp']."', '".$tab['tel']."', '".$tab['idclasse']."');" ;
+    $requete = "insert into etudiant values(null,'".$tab['nom']."','".$tab['prenom']."','".$tab['adresse']."', '".$tab['email']."', '".$tab['mdp']."', '".$tab['tel']."', '".$tab['idclasse']."');" ; //, 
     // echo $requete;
     $con = connexion ();
     if ($con)
@@ -51,7 +150,7 @@ function deleteEtudiant ($idetudiant){
     deconnexion($con);
 }
 function selectWhereEtudiant($idetudiant){
-    $requete = "select * from etudiant where idetudiant = " .$idetudiant;
+    $requete = "select * from etudiant where idclasse = " .$idetudiant;
     $con = connexion();
     if ($con){
 

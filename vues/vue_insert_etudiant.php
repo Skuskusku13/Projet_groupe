@@ -41,7 +41,15 @@
         <tr>
             <td class="align-middle text-center">Id Classe Etudiant :</td>
             <td>
-                <input type="text" name="tel" value="<?php if($lEtudiant != null) echo $lEtudiant['tel']; ?>">
+            <select name="idclasse">
+                    <?php
+                        foreach ($lesEtudiants as $unEtudiant){
+                            echo "<option value='".$unEtudiant['idetudiant']."'>";
+                            echo $unEtudiant['idclasse']."-- ".$unEtudiant['nom']."  ".$unEtudiant['prenom'];
+                            echo "</option>";
+                        }
+                    ?>
+                </select>
             </td>
         </tr>
         <?php 

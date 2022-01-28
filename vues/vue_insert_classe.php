@@ -9,19 +9,19 @@
             </td>
         </tr>
         <tr>
-            <td class="align-middle text-center">Salle Classe :</td>
+            <td class="align-middle text-center">Salle :</td>
             <td>
                 <input type="text" name="salle" value="<?php if($laClasse != null) echo $laClasse['salle']; ?>">
             </td>
         </tr>
         <tr>
-            <td class="align-middle text-center">Diplôme Classe :</td>
+            <td class="align-middle text-center">Diplôme :</td>
             <td>
                 <input type="text" name="diplome" value="<?php if($laClasse != null) echo $laClasse['diplome']; ?>">
             </td>
         </tr>
         <tr>
-            <td class="align-middle text-center">Nombres d'étudiants :</td>
+            <td class="align-middle text-center">Nombre Etudiants :</td>
             <td>
                 <input type="text" name="nbEtudiants" value="<?php if($laClasse != null) echo $laClasse['nbEtudiants']; ?>">
             </td>
@@ -31,10 +31,10 @@
         ?>
         <tr>
             <td class="align-middle text-center">
-                <input type="reset" name="Annuler" value="Annuler">
+                <input class="boutonP" type="reset" name="Annuler" value="Annuler">
             </td>
             <td class="align-middle text-center">
-                <input type="submit"    <?php
+                <input type="submit" <?php
                 if ($laClasse != null) {
                     echo 'name = "Modifier" value = "Modifier"';
                 } else {
