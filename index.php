@@ -1,3 +1,8 @@
+<?php
+session_start(); // demarrage de la session
+    require_once("fonctions/fonctions.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +39,29 @@
         <a href="index.php?page=5">
             <img style="object-fit: cover; transform: rotate(180deg);" src="images/deconnexion.png" height="40" width="40">
         </a>
+
+        <?php
+            if(isset($_GET["page"])){
+                $page = $_GET["page"];
+            }else {
+                $page = 0; 
+            } switch ($page) {
+                    case 0 : require_once("home.php");
+                        break;
+                    case 1 : require_once("g_professeur.php");
+                        break;
+                    case 2: require_once("g_etudiant.php");
+                        break;
+                    case 3 : require_once("g_classe.php");
+                        break;
+                    case 4 : require_once("g_matiere.php");
+                        break;
+                    case 5 : // deconnexion suppression de la connexion 
+                        session_destroy();
+                        header("Location: index.php"); // recharger la page 
+                        break;
+                }
+        ?>
     </center>
 </body>
 
