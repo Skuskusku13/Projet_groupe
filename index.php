@@ -17,48 +17,6 @@ require_once("fonctions/fonctions.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="css/style1.css">
-    <style>
-        body {
-            background-color: #f1f1f1;
-        }
-
-        h1{
-            padding-top: 70px;
-        }
-
-        footer {
-            max-height: 150px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            color: white;
-            background-color: midnightblue;
-            padding: 10px 0;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        ul a {
-            text-decoration: none;
-            color: #f1f1f1;
-        }
-
-        .navigation_navbar {
-            background-color: midnightblue;
-            color: #f1f1f1;
-        }
-
-        .navigation_navbar a {
-            color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        .navigation_navbar a i {
-            margin-right: 5px;
-        }
-    </style>
 </head>
 
 <body>
