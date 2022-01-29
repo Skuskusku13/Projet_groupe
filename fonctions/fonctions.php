@@ -150,7 +150,7 @@ function deleteEtudiant ($idetudiant){
     deconnexion($con);
 }
 function selectWhereEtudiant($idetudiant){
-    $requete = "select * from etudiant where idclasse = " .$idetudiant;
+    $requete = "select * from etudiant where idetudiant = " .$idetudiant;
     $con = connexion();
     if ($con){
 

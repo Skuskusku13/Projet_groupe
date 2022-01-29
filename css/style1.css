@@ -41,7 +41,3 @@ ul a {
 .navigation_navbar a i {
     margin-right: 5px;
 }
-
-.navigation_navbar a:hover{
-    text-shadow: 2px 2px 2px black;
-}
