@@ -33,14 +33,14 @@
                     // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
                         echo "<a href='index.php?page=2&action=sup&idetudiant=".$unEtudiant['idetudiant']."'>";
-                        echo "<img src = 'images/sup.png' height = '30' width = '30'> ";
+                        echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
                         echo "</a>";
                         echo "<a href='index.php?page=2&action=edit&idetudiant=".$unEtudiant['idetudiant']."'>";
                         echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
                         echo "</a>";
                    // }
 // attention ligne 45 modifier le vehicule&idetudiant 
-                    echo "<a href='index.php?page=2&action=idclasse&idetudiant=".$unEtudiant['idetudiant']."'>";
+                    echo "<a href='index.php?page=2&action=classe&idetudiant=".$unEtudiant['idetudiant']."'>";
                     echo "<img src = 'images/vehicule_.png' height = '30' width = '30' style='object-fit: cover;'> ";
                     echo "</a>";
                 echo "</td>";
