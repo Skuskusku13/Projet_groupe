@@ -22,25 +22,25 @@
     <?php 
          foreach ($lesEtudiants as $unEtudiant) {
             echo "<tr>";
-                echo "<td >".$unEtudiant['idetudiant']."</td>";
-                echo "<td>".$unEtudiant['nom']."</td>";
-                echo "<td>".$unEtudiant['prenom']."</td>";
-                echo "<td>".$unEtudiant['adresse']."</td>";
-                echo "<td>".$unEtudiant['email']."</td>";
-                echo "<td>".$unEtudiant['tel']."</td>";
-                echo "<td>".$unEtudiant['idclasse']."</td>";
-                echo "<td style='width: 200px;'>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['idetudiant']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['nom']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['prenom']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['adresse']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['email']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['tel']."</td>";
+                echo "<td class='text-center align-midlle'>".$unEtudiant['idclasse']."</td>";
+                echo "<td class='text-center align-midlle' style='width: 200px;'>";
                     // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
-                        echo "<a href='index.php?page=1&action=sup&idetudiant=".$unEtudiant['idetudiant']."'>";
+                        echo "<a href='index.php?page=2&action=sup&idetudiant=".$unEtudiant['idetudiant']."'>";
                         echo "<img src = 'images/sup.png' height = '30' width = '30'> ";
                         echo "</a>";
-                        echo "<a href='index.php?page=1&action=edit&idetudiant=".$unEtudiant['idetudiant']."'>";
+                        echo "<a href='index.php?page=2&action=edit&idetudiant=".$unEtudiant['idetudiant']."'>";
                         echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
                         echo "</a>";
                    // }
 // attention ligne 45 modifier le vehicule&idetudiant 
-                    echo "<a href='index.php?page=1&action=vehicule&idetudiant=".$unEtudiant['idetudiant']."'>";
+                    echo "<a href='index.php?page=2&action=vehicule&idetudiant=".$unEtudiant['idetudiant']."'>";
                     echo "<img src = 'images/vehicule_.png' height = '30' width = '30' style='object-fit: cover;'> ";
                     echo "</a>";
                 echo "</td>";
