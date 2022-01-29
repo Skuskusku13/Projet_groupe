@@ -43,9 +43,9 @@
             <td>
             <select name="idclasse">
                     <?php
-                        foreach ($lesEtudiants as $unEtudiant){
-                            echo "<option value='".$unEtudiant['idetudiant']."'>";
-                            echo $unEtudiant['idclasse']."-- ".$unEtudiant['nom']."  ".$unEtudiant['prenom'];
+                        foreach ($lesClasses as $uneClasse){
+                            echo "<option value='".$uneClasse['idclasse']."'>";
+                            echo $uneClasse['idclasse']."-- ".$uneClasse['nomClasse']."  ".$uneClasse['salle'];
                             echo "</option>";
                         }
                     ?>
