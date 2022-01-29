@@ -40,7 +40,7 @@
                         echo "</a>";
                    // }
 // attention ligne 45 modifier le vehicule&idetudiant 
-                    echo "<a href='index.php?page=2&action=vehicule&idetudiant=".$unEtudiant['idetudiant']."'>";
+                    echo "<a href='index.php?page=2&action=idclasse&idetudiant=".$unEtudiant['idetudiant']."'>";
                     echo "<img src = 'images/vehicule_.png' height = '30' width = '30' style='object-fit: cover;'> ";
                     echo "</a>";
                 echo "</td>";
