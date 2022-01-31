@@ -1,13 +1,19 @@
 <?php 
     function connexion (){
+        // teste de connexion pour double os
+        $con1 = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250");
+        if ($con1 == false){
+            $con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
+        }
+
         //pour Mac
-        //$con = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250");
+        
         //pour Windows
-        $con = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
-        if ($con ==null){
+        //$con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
+        if ($con1 == null){
             echo "Erreur de connexion à la bdd";
         }
-        return $con;
+        return $con1;
     }
 
     function deconnexion ($con){
@@ -436,5 +442,4 @@ function countMatieres (){
     return $nb["nb"];
 }
 
-?>
 ?>
