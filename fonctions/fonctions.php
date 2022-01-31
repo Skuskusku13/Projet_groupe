@@ -27,8 +27,8 @@ function selectAllClasses (){
     deconnexion($con);
     return $lesClasses;
 }
-function selectClassesEtudiants($idclasse) {
-    $requete = "select * from etudiant where idclasse =" .$idclasse;
+function selectClassesEtudiants($idetudiant) {
+    $requete = "select * from classe where idetudiant =" .$idetudiant;
     $con = connexion();
     if ($con){
 
