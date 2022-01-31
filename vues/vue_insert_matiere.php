@@ -23,13 +23,29 @@
         <tr>
             <td class="align-middle text-center">Id Classe :</td>
             <td>
-                <input type="text" name="idclasse" value="<?php if($laMatiere != null) echo $laMatiere['idclasse']; ?>">
+            <select name="idclasse">
+                    <?php
+                        foreach ($lesClasses as $uneClasse){
+                            echo "<option value='".$uneClasse['idclasse']."'>";
+                            echo $uneClasse['idclasse']."-- ".$uneClasse['nomClasse']."  ".$uneClasse['salle'];
+                            echo "</option>";
+                        }
+                    ?>
+                </select>
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Id Professeur :</td>
             <td>
-                <input type="text" name="idprofesseur" value="<?php if($laMatiere != null) echo $laMatiere['idprofesseur']; ?>">
+            <select name="idprofesseur">
+                    <?php
+                        foreach ($lesProfesseurs as $unProfesseur){
+                            echo "<option value='".$unProfesseur['idprofesseur']."'>";
+                            echo $unProfesseur['idprofesseur']."-- ".$unProfesseur['nom']."  ".$unProfesseur['prenom'];
+                            echo "</option>";
+                        }
+                    ?>
+                </select>
             </td>
         </tr>
         <?php 
