@@ -29,7 +29,7 @@ require_once("fonctions/fonctions.php");
                 <i class="fas fa-user-tie"></i>Professeur
             </a>
             <a href="index.php?page=2">
-                <i class="fas fa-user-graduate"></i>Eleve
+                <i class="fas fa-user-graduate"></i>Etudiant
             </a>
             <a href="index.php?page=3">
                 <i class="fas fa-chair"></i>Classe
