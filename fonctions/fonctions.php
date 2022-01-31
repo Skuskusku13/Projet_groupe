@@ -401,7 +401,8 @@ function selectWhereMatiere($idmatiere){
 
 function updateMatiere ($tab){
     $requete = "update matiere set nomMatiere = '".$tab['nomMatiere'] ."', coef = '".$tab['coef'] ."', nbHeures = '".$tab['nbHeures'] ."', idclasse = '".$tab['idclasse'] ."', idprofesseur = '".$tab['idprofesseur']."' where idmatiere = ".$tab['idmatiere'];
-    //echo $requete;
+    // echo $requete;
+    var_dump($requete);
     $con = connexion ();
     if ($con)
     {

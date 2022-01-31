@@ -30,10 +30,10 @@
                 echo "<td class='text-center align-midlle' style='width: 200px;'>";
                     // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
-                        echo "<a href='index.php?page=2&action=sup&idmatiere=".$uneMatiere['idmatiere']."'>";
+                        echo "<a href='index.php?page=4&action=sup&idmatiere=".$uneMatiere['idmatiere']."'>";
                         echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
                         echo "</a>";
-                        echo "<a href='index.php?page=2&action=edit&idmatiere=".$uneMatiere['idmatiere']."'>";
+                        echo "<a href='index.php?page=4&action=edit&idmatiere=".$uneMatiere['idmatiere']."'>";
                         echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
                         echo "</a>";
                     // }

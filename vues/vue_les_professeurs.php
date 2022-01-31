@@ -14,7 +14,6 @@
         <td class="text-center align-midlle"> Nom</td>
         <td class="text-center align-midlle"> Prénom</td>
         <td class="text-center align-midlle"> Email</td>
-        <td class="text-center align-midlle"> Mot de passe</td>
         <td class="text-center align-midlle"> Téléphone</td>
         <td class="text-center align-midlle"> Opérations</td>
     </tr>
@@ -25,7 +24,6 @@
                 echo "<td class='text-center align-midlle'>".$unProfesseur['nom']."</td>";
                 echo "<td class='text-center align-midlle'>".$unProfesseur['prenom']."</td>";
                 echo "<td class='text-center align-midlle'>".$unProfesseur['email']."</td>";
-                echo "<td class='text-center align-midlle'>".$unProfesseur['mdp']."</td>";
                 echo "<td class='text-center align-midlle'>".$unProfesseur['tel']."</td>";
                 echo "<td class='text-center align-midlle' style='width: 200px;'>";
                     // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){

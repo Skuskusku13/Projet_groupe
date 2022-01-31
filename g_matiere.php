@@ -9,6 +9,7 @@
  $laMatiere = null;
  $lesProfesseurs = selectAllProfesseurs();
  $lesClasses = selectAllClasses();
+ 
  if (isset($_GET['action']) && isset($_GET['idmatiere'])){
     $action = $_GET['action'];
     $idmatiere = $_GET['idmatiere'];
