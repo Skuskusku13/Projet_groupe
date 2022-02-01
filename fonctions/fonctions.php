@@ -2,19 +2,20 @@
     function connexion (){
         // teste de connexion pour double os
         $con1 = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250");
+        $con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
         if ($con1 == false){
-            $con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
+            return $con2;
         }
 
         //pour Mac
         
         //pour Windows
         //$con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
-        if ($con1 == null){
+       /* if ($con1 == null){
             echo "Erreur de connexion à la bdd";
         }
-        return $con1;
-    }
+        return $con1; */
+    } 
 
     function deconnexion ($con){
         mysqli_close($con);
