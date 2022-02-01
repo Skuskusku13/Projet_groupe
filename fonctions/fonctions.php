@@ -344,7 +344,6 @@ function selectAllMatieres (){
     if ($con){
 
         $lesMatieres = mysqli_query($con, $requete);
-           // var_dump($lesClients);
     }
     else{
         return null;
@@ -352,20 +351,6 @@ function selectAllMatieres (){
     deconnexion($con);
     return $lesMatieres;
 }
-/*function selectVehiculesClients($idclient) {
-    $requete = "select * from vehicule where idclient =" .$idclient;
-    $con = connexion();
-    if ($con){
-
-        $lesVehicules = mysqli_query($con, $requete);
-           // var_dump($lesClients);
-    }
-    else{
-        return null;
-    }
-    deconnexion($con);
-    return $lesVehicules;
-} */
 
 function insertMatiere ($tab){
     $requete = "insert into matiere values(null,'".$tab['nomMatiere']."','".$tab['coef']."','".$tab['nbHeures']."', '".$tab['idclasse']."', '".$tab['idprofesseur']."');" ;
