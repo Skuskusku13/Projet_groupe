@@ -5,11 +5,11 @@
 
 <?php
 
- $lesMatieres = null;
  $laMatiere = null;
- $lesProfesseurs = selectAllProfesseurs();
+ $leProfesseur = null;
+ $lesMatieres = selectAllMatieres();
  $lesClasses = selectAllClasses();
- 
+ $lesProfesseurs = selectAllProfesseurs();
  if (isset($_GET['action']) && isset($_GET['idmatiere'])){
     $action = $_GET['action'];
     $idmatiere = $_GET['idmatiere'];
@@ -49,8 +49,15 @@
     else 
     {
         $lesMatieres = selectAllMatieres();
+        
     }
-    
+
     require_once ("vues/vue_les_matieres.php");
 
+    echo "<br /> <br />";
+   /* if ($lesMatieres != null)
+    {
+        echo "<h2>Listes des classes de l'étudiant : </h2>";
+        require_once ("vues/vue_les_matieres_professeurs.php");
+    } */
 ?>

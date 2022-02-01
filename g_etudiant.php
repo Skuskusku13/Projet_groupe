@@ -5,9 +5,10 @@
 
 <?php
 
- $lesEtudiants = null;
+ $lesEtudiants = selectAllEtudiants();
  $lEtudiant = null;
  $lesClasses = selectAllClasses();
+ var_dump($lesClasses);
  if (isset($_GET['action']) && isset($_GET['idetudiant'])){
     $action = $_GET['action'];
     $idetudiant = $_GET['idetudiant'];
