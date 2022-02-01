@@ -338,14 +338,13 @@ function selectMatieresProfesseurs ($idprofesseur)
 
 // ******************* Matiere *********************
 
-/***** fonction 1 ******/
-
 function selectAllMatieres (){
     $requete = "select * from matiere; ";
     $con = connexion();
     if ($con){
 
         $lesMatieres = mysqli_query($con, $requete);
+           // var_dump($lesClients);
     }
     else{
         return null;
@@ -353,12 +352,24 @@ function selectAllMatieres (){
     deconnexion($con);
     return $lesMatieres;
 }
+/*function selectVehiculesClients($idclient) {
+    $requete = "select * from vehicule where idclient =" .$idclient;
+    $con = connexion();
+    if ($con){
 
-/***** fonction 2 ******/
+        $lesVehicules = mysqli_query($con, $requete);
+           // var_dump($lesClients);
+    }
+    else{
+        return null;
+    }
+    deconnexion($con);
+    return $lesVehicules;
+} */
 
 function insertMatiere ($tab){
-    $requete = "insert into matiere values(null,'".$tab['nomMatiere']."','".$tab['coef']."', '".$tab['nbHeures']."', '".$tab['idclasse']."', '".$tab['idprofesseur']."');" ; //, 
-    // echo $requete;
+    $requete = "insert into matiere values(null,'".$tab['nomMatiere']."','".$tab['coef']."','".$tab['nbHeures']."', '".$tab['idclasse']."', '".$tab['idprofesseur']."');" ;
+     echo $requete;
     $con = connexion ();
     if ($con)
     {
@@ -366,9 +377,6 @@ function insertMatiere ($tab){
     }
     deconnexion($con);
 }
-
-/***** fonction 3 ******/
-
 function deleteMatiere ($idmatiere){
     $requete = "delete from matiere where idmatiere = ".$idmatiere;
     // echo $requete;
@@ -379,9 +387,6 @@ function deleteMatiere ($idmatiere){
     }
     deconnexion($con);
 }
-
-/***** fonction 4 ******/
-
 function selectWhereMatiere($idmatiere){
     $requete = "select * from matiere where idmatiere = " .$idmatiere;
     $con = connexion();
@@ -396,13 +401,9 @@ function selectWhereMatiere($idmatiere){
     deconnexion($con);
     return $uneMatiere;
 }
-
-/***** fonction 5 ******/
-
 function updateMatiere ($tab){
-    $requete = "update matiere set nomMatiere = '".$tab['nomMatiere'] ."', coef = '".$tab['coef'] ."', nbHeures = '".$tab['nbHeures'] ."', idclasse = '".$tab['idclasse'] ."', idprofesseur = '".$tab['idprofesseur']."' where idmatiere = ".$tab['idmatiere'];
-    // echo $requete;
-    var_dump($requete);
+    $requete = "update matiere set nomMatiere = '".$tab['nomMatiere'] ."', coef = '".$tab['coef'] ."', nbHeures = '".$tab['nbHeures'] ."', idclasse = '".$tab['idclasse'] ."', idprofesseur = '".$tab['idprofesseur'] ."' where idmatiere = ".$tab['idmatiere'];
+    echo $requete;
     $con = connexion ();
     if ($con)
     {
@@ -410,9 +411,6 @@ function updateMatiere ($tab){
     }
     deconnexion($con);
 }
-
-/***** fonction 6 ******/
-
 function searchMatieres ($mot){
     $requete = "select * from matiere where nomMatiere like '%".$mot."%' or coef like '%".$mot."%' or nbHeures like '%".$mot."%' or idclasse like '%".$mot."%' or idprofesseur like '%".$mot."%'; ";
     $con = connexion();
@@ -426,9 +424,6 @@ function searchMatieres ($mot){
     deconnexion($con);
     return $lesMatieres;
 }
-
-/***** fonction 7 ******/
-
 function countMatieres (){
     $requete = "select count(*) as nb from matiere ;";
     $con = connexion();
@@ -442,5 +437,4 @@ function countMatieres (){
     deconnexion($con);
     return $nb["nb"];
 }
-
 ?>

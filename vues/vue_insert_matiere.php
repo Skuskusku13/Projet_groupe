@@ -1,5 +1,6 @@
 <h4>Insertion d'une matière</h4>
 
+
 <form method="post" action="">
     <table class="table table-hover" border="0">
         <tr>
@@ -11,17 +12,17 @@
         <tr>
             <td class="align-middle text-center">Coefficient :</td>
             <td>
-                <input type="text" name="coef" value="<?php if($laMatiere != null) echo $laMatiere['coef']; ?>">
+                <input type="number" name="coef" value="<?php if($laMatiere != null) echo $laMatiere['coef']; ?>">
             </td>
         </tr>
         <tr>
-            <td class="align-middle text-center">Nombes d'heures :</td>
+            <td class="align-middle text-center">Nombres d'heures :</td>
             <td>
-                <input type="text" name="nbHeures" value="<?php if($laMatiere != null) echo $laMatiere['nbHeures']; ?>">
+                <input type="number" name="nbHeures" value="<?php if($laMatiere != null) echo $laMatiere['nbHeures']; ?>">
             </td>
         </tr>
         <tr>
-            <td class="align-middle text-center">Id Classe :</td>
+            <td class="align-middle text-center">Id Classe Etudiant :</td>
             <td>
             <select name="idclasse">
                     <?php
@@ -49,7 +50,7 @@
             </td>
         </tr>
         <?php 
-            if ($laMatiere != null) echo "<input type='hidden' name='idmatière' value = '".$laMatiere['idmatiere']."' >";
+            if ($laMatiere != null) echo "<input type='hidden' name='idmatiere' value = '".$laMatiere['idmatiere']."' >";
         ?>
         <tr>
             <td class="align-middle text-center">
@@ -57,11 +58,11 @@
             </td>
             <td class="align-middle text-center">
                 <input type="submit"    <?php
-                if ($laMatiere != null) {
+                 if ($laMatiere != null) {
                     echo 'name = "Modifier" value = "Modifier"';
                 } else {
                     echo 'name = "Valider" value = "Valider"';
-                }
+                } 
                 ?> >
             </td>
         </tr>
