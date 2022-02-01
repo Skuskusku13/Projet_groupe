@@ -52,7 +52,7 @@ function selectAllClasses (){
     deconnexion($con);
     return $lesClasses;
 }
-function selectClassesEtudiants($idetudiant) {
+/*function selectClassesEtudiants($idetudiant) {
     $requete = "select * from classe where idetudiant =" .$idetudiant;
     $con = connexion();
     if ($con){
@@ -65,7 +65,7 @@ function selectClassesEtudiants($idetudiant) {
     }
     deconnexion($con);
     return $lesClasses;
-}
+}*/
 
 function insertClasse ($tab){
     $requete = "insert into classe values(null,'".$tab['nomClasse']."','".$tab['salle']."','".$tab['diplome']."', '".$tab['nbEtudiants']."');" ;
@@ -227,6 +227,22 @@ function countEtudiants (){
     deconnexion($con);
     return $nb["nb"];
 }
+
+function selectClassesEtudiants ($idetudiant)
+    {
+        $requete = "select * from classe where idetudiant=".$idetudiant;
+        $con = connexion ();
+        if ($con)
+        {
+            $lesClasses = mysqli_query($con, $requete);
+        }
+        else 
+        {
+           deconnexion($con);
+        }
+           return $lesClasses;  
+        
+    }
 
 // ******************* Professeur *********************
 

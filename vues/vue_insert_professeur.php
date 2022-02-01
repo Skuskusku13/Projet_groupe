@@ -23,7 +23,7 @@
         <tr>
             <td class="align-middle text-center">Mot de passe Professeur :</td>
             <td>
-                <input type="text" name="mdp" value="<?php if($leProfesseur != null) echo $leProfesseur['mdp']; ?>">
+                <input type="password" name="mdp" value="<?php if($leProfesseur != null) echo $leProfesseur['mdp']; ?>">
             </td>
         </tr>
         <tr>

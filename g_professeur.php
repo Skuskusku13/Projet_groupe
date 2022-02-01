@@ -4,14 +4,14 @@
 </br>
 <?php
 
-$lesMatieres = selectAllMatieres();
+$lesMatieres = null;
 $lesProfesseurs = null;
 $leProfesseur = null;
 if (isset($_GET['action']) && isset($_GET['idprofesseur'])){
     $action = $_GET['action'];
     $idprofesseur = $_GET['idprofesseur'];
    if ($action == "matiere"){
-        $lesProfesseurs = selectMatieresProfesseurs($idprofesseur);
+        $lesMatieres = selectMatieresProfesseurs($idprofesseur);
     } 
 }
 
