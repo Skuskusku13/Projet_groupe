@@ -8,6 +8,7 @@
         }
 
         //pour Mac
+        //
         
         //pour Windows
         //$con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
