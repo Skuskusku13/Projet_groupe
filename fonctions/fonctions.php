@@ -11,10 +11,14 @@
         
         //pour Windows
         //$con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
-       /* if ($con1 == null){
+       if ($con1 == null){
             echo "Erreur de connexion à la bdd";
         }
-        return $con1; */
+        return $con1;
+        if ($con2 == null){
+            echo "Erreur de connexion à la bdd";
+        }
+        return $con2;
     } 
 
     function deconnexion ($con){
