@@ -76,7 +76,7 @@ session_start(); // demarrage de la session
         }
         ?>
     </center>
-    <footer>
+    <footer style="margin-top: 30px;">
         <div class="d-flex justify-content-evenly">
             <div>
                 <p class="text-center">Coryright©

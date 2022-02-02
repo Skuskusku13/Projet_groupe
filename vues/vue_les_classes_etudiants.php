@@ -1,4 +1,4 @@
-<table class="table table-striped table-hover" border="4" style="box-shadow: 10px 5px 5px black; border-color: black;">
+<table class="table table-striped table-hover" border="4" style="box-shadow: 10px 5px 5px black; border-color: black; margin: 0 10px; width: 1000px;">
     <tr>
         <td class="font-weight-bold text-center align-midlle"> Id Classe</td>
         <td class="font-weight-bold text-center align-midlle"> Nom Classe</td>

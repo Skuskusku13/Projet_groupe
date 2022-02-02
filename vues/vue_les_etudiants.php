@@ -8,7 +8,7 @@
 </form>
 <br />
 
-<table class="table table-hover table-striped table-dark" border ="1">
+<table class="table table-hover table-striped table-dark" border ="1" style="margin: 0 10px; width: 1000px">
     <tr>
         <td class="text-center align-midlle"> Id Etudiant</td>
         <td class="text-center align-midlle"> Nom Etudiant</td>
