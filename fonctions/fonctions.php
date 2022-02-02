@@ -1,8 +1,8 @@
 <?php 
      function connexion ()
      {
-        //$con = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250"); 
-        $con = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
+        $con = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250"); 
+        //$con = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
         if ($con == null)
         {
             echo "Erreur de connexion à la bdd";
@@ -21,6 +21,7 @@
         //pour Mac
         
         //pour Windows
+        //$con1 = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250");
         //$con2 = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
        if ($con1 == null){
             echo "Erreur de connexion à la bdd";
@@ -52,20 +53,6 @@ function selectAllClasses (){
     deconnexion($con);
     return $lesClasses;
 }
-/*function selectClassesEtudiants($idetudiant) {
-    $requete = "select * from classe where idetudiant =" .$idetudiant;
-    $con = connexion();
-    if ($con){
-
-        $lesClasses = mysqli_query($con, $requete);
-           // var_dump($lesClients);
-    }
-    else{
-        return null;
-    }
-    deconnexion($con);
-    return $lesClasses;
-}*/
 
 function insertClasse ($tab){
     $requete = "insert into classe values(null,'".$tab['nomClasse']."','".$tab['salle']."','".$tab['diplome']."', '".$tab['nbEtudiants']."');" ;
@@ -454,4 +441,3 @@ function countMatieres (){
     deconnexion($con);
     return $nb["nb"];
 }
-?>

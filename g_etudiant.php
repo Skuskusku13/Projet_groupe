@@ -5,15 +5,15 @@
 
 <?php
 
- $lesEtudiants = selectAllEtudiants();
+ $lesEtudiants = selectAllClasses();
  $lEtudiant = null;
- $lesClasses = selectAllClasses();
- var_dump($lesClasses);
+ $lesClasses = null;
+ // var_dump($lesClasses);
  if (isset($_GET['action']) && isset($_GET['idetudiant'])){
     $action = $_GET['action'];
     $idetudiant = $_GET['idetudiant'];
    if ($action == "classe"){
-        $lesEtudiants = selectClassesEtudiants($idetudiant);
+        $lesClasses = selectClassesEtudiants($idetudiant);
     } 
 }
 
@@ -30,7 +30,7 @@
                     $lEtudiant = selectWhereEtudiant($idetudiant);
                     break;
                 case 'classe' :
-                    $lesEtudiants = selectClassesEtudiants($idetudiant);
+                    $lesClasses = selectClassesEtudiants($idetudiant);
                     break; 
             }
         }

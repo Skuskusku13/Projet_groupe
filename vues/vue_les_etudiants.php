@@ -39,7 +39,6 @@
                         echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
                         echo "</a>";
                     // }
-                    // attention ligne 45 modifier le vehicule&idetudiant 
                     echo "<a href='index.php?page=2&action=classe&idetudiant=".$unEtudiant['idetudiant']."'>";
                     echo "<img src = 'images/classe.png' height = '30' width = '30' style='object-fit: cover;'> ";
                     echo "</a>";
