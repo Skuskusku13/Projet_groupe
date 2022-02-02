@@ -1,7 +1,7 @@
 <h4>Insertion d'un étudiant</h4>
 
 <form method="post" action="">
-    <table class="table table-hover" border="0">
+    <table class="table table-hover" border="0" style="width: 600px;">
         <tr>
             <td class="align-middle text-center">Nom Etudiant :</td>
             <td>

@@ -7,7 +7,7 @@
 
  $lesEtudiants = selectAllClasses();
  $lEtudiant = null;
- $lesClasses = null;
+ $lesClasses = selectAllClasses();
  // var_dump($lesClasses);
  if (isset($_GET['action']) && isset($_GET['idetudiant'])){
     $action = $_GET['action'];
