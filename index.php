@@ -1,6 +1,6 @@
 <?php
 session_start(); // demarrage de la session
-    require_once("fonctions/fonctions.php");
+require_once("fonctions/fonctions.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +17,80 @@ session_start(); // demarrage de la session
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="css/style1.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, rgba(34, 147, 195, 1) 27%, rgba(45, 253, 235, 0.9626225490196079) 100%);
+            color: #F1F1F1;
+        }
+
+        .navigation_navbar {
+            background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
+            color: black;
+            position: fixed;
+            width: 100%;
+            padding: 0;
+        }
+
+
+        .navigation_navbar .onglets a{
+            color: black;
+            text-decoration: none;
+            padding: 0 30px;
+            font-size: 19px;
+            line-height: 110px;
+            vertical-align: middle;
+        }
+
+        .navigation_navbar a i {
+            margin-right: 5px;
+        }
+
+        .navigation_navbar .onglets img{
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation_navbar .onglets a:not(:first-child):hover {
+            background-color: black;
+            color: #F1F1F1;
+            transition: 0.3s ease-in;
+        }
+
+        h1 {
+            padding-top: 70px;
+        }
+
+        footer {
+            max-height: 150px;
+            /*position: absolute;*/
+            bottom: 0;
+            width: 100%;
+            color: black;
+            background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        
+    </style>
 </head>
 
 <body>
+
     <div class="navigation_navbar">
-        <div class="d-flex justify-content-evenly">
+        <div class="d-flex justify-content-evenly onglets">
+            <a href="index.php?page=0">
+                <img src="images/logo.png"/>
+            </a>
             <a href="index.php?page=0">
                 <i class="fas fa-home"></i>Accueil
             </a>
