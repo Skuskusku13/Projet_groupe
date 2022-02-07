@@ -58,6 +58,7 @@ require_once("fonctions/fonctions.php");
             transition: 0.3s ease-in;
         }
 
+
         @media all and (max-width: 1200px) {
 
             .img_accueil {
@@ -68,8 +69,7 @@ require_once("fonctions/fonctions.php");
                 margin: 50px;
             }
 
-            .navigation_navbar,
-            .navigation_navbar i {
+            .navigation_navbar {
                 display: none;
             }
 
@@ -232,7 +232,7 @@ require_once("fonctions/fonctions.php");
 
         <ul class="d-flex flex-wrap menu_smart">
             <!-- pages du menu -->
-            <a href="index.php?page=6">
+            <a href="index.php?page=0">
                 <i class="fas fa-home"></i>Accueil
             </a>
             <a href="index.php?page=1">
@@ -261,16 +261,22 @@ require_once("fonctions/fonctions.php");
                 <img src="images/logo.png" />
             </a>
             <a href="index.php?page=0">
+                <i class="fas fa-home"></i>Accueil
             </a>
             <a href="index.php?page=1">
+                <i class="fas fa-user-tie"></i>Professeur
             </a>
             <a href="index.php?page=2">
+                <i class="fas fa-user-graduate"></i>Etudiant
             </a>
             <a href="index.php?page=3">
+                <i class="fas fa-chair"></i>Classe
             </a>
             <a href="index.php?page=4">
+                <i class="fas fa-book-reader"></i>Matière
             </a>
             <a href="index.php?page=5">
+                <i class="fas fa-sign-out-alt"></i>Déconnexion
             </a>
 
         </div>
