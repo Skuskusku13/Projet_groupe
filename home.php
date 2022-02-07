@@ -1,7 +1,7 @@
 </br>
 <h3>Accueil du site</h3>
 </br>
-<img style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px;" src="images/background_tree.jpeg" height="600" width="auto">
+<img class="img_accueil" style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px;" src="images/background_tree.jpeg" height="600" width="auto">
 
 </br>
 </br>
