@@ -1,23 +1,23 @@
 <h4>Insertion d'une classe</h4>
 
 <form method="post" action="">
-    <table class="table table-hover" border="0" style="width: 600px;">
+    <table class="table table-hover table_insert" border="0">
         <tr>
             <td class="align-middle text-center">Nom Classe :</td>
             <td>
-                <input type="text" name="nomClasse" value="<?php if($laClasse != null) echo $laClasse['nomClasse']; ?>">
+                <input type="text" name="nomClasse" required value="<?php if($laClasse != null) echo $laClasse['nomClasse']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Salle :</td>
             <td>
-                <input type="text" name="salle" value="<?php if($laClasse != null) echo $laClasse['salle']; ?>">
+                <input type="text" name="salle" required value="<?php if($laClasse != null) echo $laClasse['salle']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Diplôme :</td>
             <td>
-                <input type="text" name="diplome" value="<?php if($laClasse != null) echo $laClasse['diplome']; ?>">
+                <input type="text" name="diplome" required value="<?php if($laClasse != null) echo $laClasse['diplome']; ?>">
             </td>
         </tr>
         <tr>

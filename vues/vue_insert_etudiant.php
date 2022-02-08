@@ -1,35 +1,35 @@
 <h4>Insertion d'un étudiant</h4>
 
 <form method="post" action="">
-    <table class="table table-hover" border="0" style="width: 600px;">
+    <table class="table table-hover table_insert" border="0">
         <tr>
             <td class="align-middle text-center">Nom Etudiant :</td>
             <td>
-                <input type="text" name="nom" value="<?php if($lEtudiant != null) echo $lEtudiant['nom']; ?>">
+                <input type="text" name="nom" required value="<?php if($lEtudiant != null) echo $lEtudiant['nom']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Prénom Etudiant :</td>
             <td>
-                <input type="text" name="prenom" value="<?php if($lEtudiant != null) echo $lEtudiant['prenom']; ?>">
+                <input type="text" name="prenom" required value="<?php if($lEtudiant != null) echo $lEtudiant['prenom']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Adresse Etudiant :</td>
             <td>
-                <input type="text" name="adresse" value="<?php if($lEtudiant != null) echo $lEtudiant['adresse']; ?>">
+                <input type="text" name="adresse" required value="<?php if($lEtudiant != null) echo $lEtudiant['adresse']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Email Etudiant :</td>
             <td>
-                <input type="text" name="email" value="<?php if($lEtudiant != null) echo $lEtudiant['email']; ?>">
+                <input type="email" name="email" required value="<?php if($lEtudiant != null) echo $lEtudiant['email']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Mot de passe Etudiant :</td>
             <td>
-                <input type="password" name="mdp" value="<?php if($lEtudiant != null) echo $lEtudiant['mdp']; ?>">
+                <input type="password" name="mdp" required value="<?php if($lEtudiant != null) echo $lEtudiant['mdp']; ?>">
             </td>
         </tr>
         <tr>

@@ -20,6 +20,7 @@ require_once("fonctions/fonctions.php");
     <style>
         /* media queries / et navbar_smart  */
 
+
         .container_navbar_smart {
             display: none;
         }
@@ -167,7 +168,7 @@ require_once("fonctions/fonctions.php");
 
             .responsive_footer li,
             .responsive_footer a {
-                font-size: 12px;
+                font-size: 0.7em;
             }
         }
 
@@ -184,21 +185,11 @@ require_once("fonctions/fonctions.php");
             color: #F1F1F1;
             background-repeat: no-repeat;
             font-family: 'Roboto Mono', monospace;
+            min-width: 360px;
         }
 
         h1 {
             padding-top: 70px;
-        }
-
-        footer {
-            max-height: 150px;
-            /*position: absolute;*/
-            bottom: 0;
-            width: 100%;
-            color: black;
-            background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
-            padding: 10px 0;
-            font-weight: 700;
         }
 
         ul {
@@ -208,6 +199,68 @@ require_once("fonctions/fonctions.php");
         ul a {
             text-decoration: none;
             color: black;
+        }
+
+        /* media queries des tables  */
+
+        @media all and (min-width: 1036px) {
+            .table_inline_flex {
+                margin-right: 50px;
+                font-size: 1.1em;
+            }
+
+            .table_insert {
+                width: 600px;
+            }
+
+            footer {
+                max-height: 150px;
+                /*position: absolute;*/
+                bottom: 0;
+                width: 100%;
+                color: black;
+                background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
+                padding: 10px 0;
+                font-weight: 700;
+            }
+
+        }
+
+        @media all and (max-width: 1035px) {
+            .table_inline_flex {
+                margin: 0 10px;
+                font-size: 0.7em;
+                word-break: break-word;
+            }
+
+            .table_insert {
+                width: 300px;
+            }
+
+            footer {
+                word-wrap: break-word;
+                max-height: 150px;
+                /*position: absolute;*/
+                bottom: 0;
+                width: 100%;
+                color: black;
+                background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
+                padding: 10px 0;
+                font-weight: 700;
+                font-size: 0.6em;
+            }
+        }
+
+        @media all and (max-width: 580px) {
+            .table_inline_flex {
+                width: 350px;
+            }
+
+            .table_inline_flex img {
+                display: flex;
+                word-wrap: wrap;
+                margin: 5px 0px 5px 0px;
+            }
         }
     </style>
 </head>

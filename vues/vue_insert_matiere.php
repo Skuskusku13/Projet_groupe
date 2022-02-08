@@ -2,17 +2,17 @@
 
 
 <form method="post" action="">
-    <table class="table table-hover" border="0" style="width: 600px;">
+    <table class="table table-hover table_insert" border="0">
         <tr>
             <td class="align-middle text-center">Nom Matière :</td>
             <td>
-                <input type="text" name="nomMatiere" value="<?php if($laMatiere != null) echo $laMatiere['nomMatiere']; ?>">
+                <input type="text" name="nomMatiere" required value="<?php if($laMatiere != null) echo $laMatiere['nomMatiere']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Coefficient :</td>
             <td>
-                <input type="number" name="coef" value="<?php if($laMatiere != null) echo $laMatiere['coef']; ?>">
+                <input type="number" name="coef" required value="<?php if($laMatiere != null) echo $laMatiere['coef']; ?>">
             </td>
         </tr>
         <tr>

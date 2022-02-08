@@ -1,29 +1,29 @@
 <h4>Insertion d'un Professeur</h4>
 
 <form method="post" action="">
-    <table class="table table-hover" border="0" style="width: 600px;">
+    <table class="table table-hover table_insert" border="0">
         <tr>
             <td class="align-middle text-center">Nom Professeur :</td>
             <td>
-                <input type="text" name="nom" value="<?php if($leProfesseur != null) echo $leProfesseur['nom']; ?>">
+                <input type="text" name="nom" required value="<?php if($leProfesseur != null) echo $leProfesseur['nom']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Prénom Professeur :</td>
             <td>
-                <input type="text" name="prenom" value="<?php if($leProfesseur != null) echo $leProfesseur['prenom']; ?>">
+                <input type="text" name="prenom" required value="<?php if($leProfesseur != null) echo $leProfesseur['prenom']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Email Professeur :</td>
             <td>
-                <input type="text" name="email" value="<?php if($leProfesseur != null) echo $leProfesseur['email']; ?>">
+                <input type="email" name="email" required value="<?php if($leProfesseur != null) echo $leProfesseur['email']; ?>">
             </td>
         </tr>
         <tr>
             <td class="align-middle text-center">Mot de passe Professeur :</td>
             <td>
-                <input type="password" name="mdp" value="<?php if($leProfesseur != null) echo $leProfesseur['mdp']; ?>">
+                <input type="password" name="mdp" required value="<?php if($leProfesseur != null) echo $leProfesseur['mdp']; ?>">
             </td>
         </tr>
         <tr>
