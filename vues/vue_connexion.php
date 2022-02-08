@@ -11,8 +11,8 @@
             <td><input type="password" name="mdp"></td>
         </tr>
         <tr>
-            <td class="text-center align-middle"><input type="reset" name="Annuler" value="Annuler"></td>
-            <td class="text-center align-middle"><input type="submit" name="seConnecter" value="Valider"></td>
+            <td class="text-center align-middle"><input class="boutonP" type="reset" name="Annuler" value="Annuler"></td>
+            <td class="text-center align-middle"><input class="boutonP" type="submit" name="seConnecter" value="Valider"></td>
         </tr>
     </table>
 </form>

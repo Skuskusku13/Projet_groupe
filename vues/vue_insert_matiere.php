@@ -54,10 +54,10 @@
         ?>
         <tr>
             <td class="align-middle text-center">
-                <input type="reset" name="Annuler" value="Annuler">
+                <input class="boutonP" type="reset" name="Annuler" value="Annuler">
             </td>
             <td class="align-middle text-center">
-                <input type="submit"    <?php
+                <input class="boutonP" type="submit"    <?php
                  if ($laMatiere != null) {
                     echo 'name = "Modifier" value = "Modifier"';
                 } else {

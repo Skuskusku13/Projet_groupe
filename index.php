@@ -262,6 +262,21 @@ require_once("fonctions/fonctions.php");
                 margin: 5px 0px 5px 0px;
             }
         }
+
+        .boutonP {
+            margin: 5px 0;
+            border-radius: 30px;
+            font-family: fantasy;
+            background-color: #3F4856;
+            color: #F1F1F1;
+            width: 120px;
+            padding: 3px;
+            box-shadow: 3px 3px #5D79A5;
+        }
+
+        .boutonP:first-child{
+            margin-left: 30px;
+        }
     </style>
 </head>
 
@@ -394,16 +409,8 @@ require_once("fonctions/fonctions.php");
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-        // javascript menu smart
-
-        let burger = document.querySelector('.toggle_burger');
-        let contains_smart = document.querySelector('.container_navbar_smart');
-
-        burger.addEventListener('click', () => {
-            contains_smart.classList.toggle('open');
-        });
-    </script>
+    <!-- insertion de notre javascript -->
+    <script type="text/javascript" src="js/script1.js"></script>
 </body>
 
 </html>

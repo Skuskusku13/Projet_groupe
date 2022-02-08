@@ -3,7 +3,7 @@
 <form method="post" action="">
     Mot de recherche :
     <input type="text" name="mot">
-    <input type="submit" name="Rechercher" value="Rechercher">
+    <input class="boutonP" type="submit" name="Rechercher" value="Rechercher">
 </form>
 <br />
 
