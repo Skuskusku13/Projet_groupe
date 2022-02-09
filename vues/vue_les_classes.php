@@ -15,11 +15,10 @@
             <td class="text-center align-midlle"> Salle </td>
             <td class="text-center align-midlle"> Diplôme</td>
             <td class="text-center align-midlle"> Nombre Etudiants</td>
-            <!-- <?php // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
-                    // echo "<td class='text-center align-midlle'> Opérations</td>";
-                    // }
-                    ?>  -->
-            <td class='text-center align-midlle'> Opérations</td>
+             <?php  if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+                     echo "<td class='text-center align-midlle'> Opérations</td>";
+                     }
+                    ?> 
         </tr>
         <?php
         foreach ($lesClasses as $uneClasse) {
@@ -29,7 +28,7 @@
             echo "<td class='text-center align-middle'>" . $uneClasse['salle'] . "</td>";
             echo "<td class='text-center align-middle'>" . $uneClasse['diplome'] . "</td>";
             echo "<td class='text-center align-middle'>" . $uneClasse['nbEtudiants'] . "</td>";
-            //if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+            if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
             echo "<td class='text-center align-middle'>";
             echo "<a href='index.php?page=3&action=sup&idclasse=" . $uneClasse['idclasse'] . "'>";
             echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
@@ -38,7 +37,7 @@
             echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
             echo "</a>";
             echo "</td>";
-            //}
+            }
             echo "</tr>";
         }
         ?>

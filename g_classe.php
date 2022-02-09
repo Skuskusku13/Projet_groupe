@@ -8,7 +8,7 @@
 $laClasse = null;
 $lesClasses = selectAllClasses();
 
-// if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+ if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
  
     if (isset($_GET['action']) && isset($_GET['idclasse'])){
         $action = $_GET['action'];
@@ -33,7 +33,7 @@ $lesClasses = selectAllClasses();
         {
             insertClasse($_POST);
         }
-// } 
+ } 
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

@@ -15,7 +15,7 @@ if (isset($_GET['action']) && isset($_GET['idprofesseur'])){
     } 
 }
 
-    // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+     if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
        
         if (isset($_GET['action']) && isset($_GET['idprofesseur'])){
             $action = $_GET['action'];
@@ -43,7 +43,7 @@ if (isset($_GET['action']) && isset($_GET['idprofesseur'])){
         {
             insertProfesseur($_POST);
         }
-   // }
+    }
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

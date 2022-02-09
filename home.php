@@ -1,13 +1,18 @@
-</br>
-<h3>Accueil du site</h3>
-</br>
-<img class="img_accueil" style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px;" src="images/background_tree.jpeg" height="600" width="auto">
+<h3 style="font-size: 26px;">Accueil du site</h3>
+<h4>
+    <?php
+    echo 'Bienvenue ' . $_SESSION['nom'] . " " . $_SESSION['prenom'];
+    echo '<br /><br /> Vous avez le rôle : ' . $_SESSION['role'];
+    ?>
+</h4>
 
-</br>
-</br>
+<br />
+
+<div>
+    <img class="img_accueil" style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px;" src="images/background_tree.jpeg" height="600" width="auto">
+
+</div>
 <p>
-    Bienvenue dans le site du CFA INSTA. Créé en 2009 par Ryad Lebib et Hubert 
-</br>Trapet,le CFA INSTA accueille et forme près de 600 étudiant(e)s par an pour leur assurer 
-</br>un avenir professionnel. Venez nous voir, nous serons ravis de vous accueillir et de vous rendre service.
-</br>
+
 </p>
+

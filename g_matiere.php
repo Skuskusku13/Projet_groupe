@@ -15,7 +15,7 @@
     $idmatiere = $_GET['idmatiere'];
 }
 
-    // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+     if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
        
         if (isset($_GET['action']) && isset($_GET['idmatiere'])){
             $action = $_GET['action'];
@@ -40,7 +40,7 @@
         {
             insertMatiere($_POST);
         }
-   // }
+    }
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

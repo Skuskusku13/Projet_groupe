@@ -441,3 +441,20 @@ function countMatieres (){
     deconnexion($con);
     return $nb["nb"];
 }
+
+// ******************* Users *********************
+
+function selectUser ($email){
+    $requete = "select * from user where email='$email'";
+    $con = connexion();
+    if ($con)
+    {
+        $resultat = mysqli_query($con, $requete);
+        $unUser = mysqli_fetch_assoc($resultat);
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $unUser;
+}
+?>

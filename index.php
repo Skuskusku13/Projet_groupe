@@ -28,7 +28,8 @@ require_once("fonctions/fonctions.php");
         .navigation_navbar {
             background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
             color: black;
-            position: fixed;
+            position: absolute;
+            top: 0;
             width: 100%;
             padding: 0;
             font-weight: 700;
@@ -186,6 +187,7 @@ require_once("fonctions/fonctions.php");
             background-repeat: no-repeat;
             font-family: 'Roboto Mono', monospace;
             min-width: 360px;
+            height: 100%;
         }
 
         h1 {
@@ -224,6 +226,11 @@ require_once("fonctions/fonctions.php");
                 font-weight: 700;
             }
 
+            .table_connexion {
+                width: 600px;
+                height: 200px;
+            }
+
         }
 
         @media all and (max-width: 1035px) {
@@ -240,7 +247,7 @@ require_once("fonctions/fonctions.php");
             footer {
                 word-wrap: break-word;
                 max-height: 150px;
-                /*position: absolute;*/
+                position: absolute;
                 bottom: 0;
                 width: 100%;
                 color: black;
@@ -248,6 +255,11 @@ require_once("fonctions/fonctions.php");
                 padding: 10px 0;
                 font-weight: 700;
                 font-size: 0.6em;
+            }
+
+            .table_connexion {
+                width: 400px;
+                height: 200px;
             }
         }
 
@@ -260,6 +272,11 @@ require_once("fonctions/fonctions.php");
                 display: flex;
                 word-wrap: wrap;
                 margin: 5px 0px 5px 0px;
+            }
+
+            .table_connexion form {
+                width: 300px;
+                height: 200px;
             }
         }
 
@@ -274,17 +291,38 @@ require_once("fonctions/fonctions.php");
             box-shadow: 3px 3px #5D79A5;
         }
 
-        .boutonP:first-child{
+        .boutonP:first-child {
             margin-left: 30px;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- menu smart -->
-
-
+    <center>
+        <h1>Bienvenue sur notre site sur le CFA</h1>
+        <!-- menu smart -->
+        <?php
+        if (!isset($_SESSION['email'])) { // si il n'y a pas de session
+            require_once("connexion.php");
+        }
+        if (isset($_POST['seConnecter'])) {
+            $email = $_POST['email'];
+            $unUser = selectUser($email);
+            // var_dump($unUser);
+            if ($unUser == null) {
+                echo "Veuillez vérifier vos identifiants !";
+            } else {
+                echo "Bienvenue " . $unUser['nom'] . " " . $unUser['prenom'];
+                // creation de la session 
+                $_SESSION['email'] = $unUser['email'];
+                $_SESSION['nom'] = $unUser['nom'];
+                $_SESSION['prenom'] = $unUser['prenom'];
+                $_SESSION['role'] = $unUser['role'];
+                // on recharge la page vers le home
+            }
+        }
+        if (isset($_SESSION['email'])) {
+            echo '
 
     <div class="container_navbar_smart">
         <div style="float: left;">
@@ -348,41 +386,39 @@ require_once("fonctions/fonctions.php");
             </a>
 
         </div>
-    </div>
+    </div> ';
 
-    <center>
-        <h1>Bienvenue sur notre site sur le CFA</h1>
-
-        <?php
-        if (isset($_GET["page"])) {
-            $page = $_GET["page"];
-        } else {
-            $page = 0;
-        }
-        switch ($page) {
-            case 0:
-                require_once("home.php");
-                break;
-            case 1:
-                require_once("g_professeur.php");
-                break;
-            case 2:
-                require_once("g_etudiant.php");
-                break;
-            case 3:
-                require_once("g_classe.php");
-                break;
-            case 4:
-                require_once("g_matiere.php");
-                break;
-            case 5: // deconnexion suppression de la connexion  
-                session_destroy();
-                header("Location: index.php"); // recharger la page 
-                break;
+            if (isset($_GET["page"])) {
+                $page = $_GET["page"];
+            } else {
+                $page = 0;
+            }
+            switch ($page) {
+                case 0:
+                    require_once("home.php");
+                    break;
+                case 1:
+                    require_once("g_professeur.php");
+                    break;
+                case 2:
+                    require_once("g_etudiant.php");
+                    break;
+                case 3:
+                    require_once("g_classe.php");
+                    break;
+                case 4:
+                    require_once("g_matiere.php");
+                    break;
+                case 5: // deconnexion suppression de la connexion  
+                    session_destroy();
+                    header("Location: index.php"); // recharger la page 
+                    break;
+            }
         }
         ?>
+
     </center>
-    <footer class="repsonsive_footer" style="margin-top: 30px;">
+    <footer class="responsive_footer" style="margin-top: 30px;">
         <div class="d-flex justify-content-evenly">
             <div>
                 <p class="text-center">Coryright©
@@ -409,6 +445,7 @@ require_once("fonctions/fonctions.php");
             </div>
         </div>
     </footer>
+
     <!-- insertion de notre javascript -->
     <script type="text/javascript" src="js/script1.js"></script>
 </body>

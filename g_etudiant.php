@@ -17,7 +17,7 @@
     } 
 }
 
-    // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+    if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
        
         if (isset($_GET['action']) && isset($_GET['idetudiant'])){
             $action = $_GET['action'];
@@ -45,7 +45,7 @@
         {
             insertEtudiant($_POST);
         }
-   // }
+    }
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];
