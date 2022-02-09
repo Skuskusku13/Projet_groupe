@@ -19,65 +19,65 @@ require_once('./fonctions/fonctions.php')
 
 <body>
 
-<div class="container_navbar_smart">
-            <div style="float: left;">
-                <a href="home.php?page=0">
-                    <img style="height: 60px;" src="images/logo.png" />
-                </a>
-            </div>
-            <div class="toggle_burger" style="float: right;">
-                <i class="fas fa-bars ouvrir"></i>
-                <i class="fas fa-times fermer"></i>
-            </div>
-            <ul class="d-flex flex-wrap menu_smart">
-                <!-- pages du menu -->
-                <a href="home.php?page=0">
-                    <i class="fas fa-home"></i>Accueil
-                </a>
-                <a href="home.php?page=1">
-                    <i class="fas fa-user-tie"></i>Professeur
-                </a>
-                <a href="home.php?page=2">
-                    <i class="fas fa-user-graduate"></i>Etudiant
-                </a>
-                <a href="home.php?page=3">
-                    <i class="fas fa-chair"></i>Classe
-                </a>
-                <a href="home.php?page=4">
-                    <i class="fas fa-book-reader"></i>Matière
-                </a>
-                <a href="deconnexion.php">
-                    <i class="fas fa-sign-out-alt"></i>Déconnexion
-                </a>
-            </ul>
+    <div class="container_navbar_smart">
+        <div style="float: left;">
+            <a href="home.php?page=0">
+                <img style="height: 60px;" src="images/logo.png" />
+            </a>
         </div>
-        <!-- fin menu smart -->
-        <div class="navigation_navbar">
-            <div class="d-flex justify-content-evenly onglets">
-                <a href="home.php?page=0">
-                    <img src="images/logo.png" />
-                </a>
-                <a href="home.php?page=0">
-                    <i class="fas fa-home"></i>Accueil
-                </a>
-                <a href="home.php?page=1">
-                    <i class="fas fa-user-tie"></i>Professeur
-                </a>
-                <a href="home.php?page=2">
-                    <i class="fas fa-user-graduate"></i>Etudiant
-                </a>
-                <a href="home.php?page=3">
-                    <i class="fas fa-chair"></i>Classe
-                </a>
-                <a href="home.php?page=4">
-                    <i class="fas fa-book-reader"></i>Matière
-                </a>
-                <a href="deconnexion.php">
-                    <i class="fas fa-sign-out-alt"></i>Déconnexion
-                </a>
-            </div>
+        <div class="toggle_burger" style="float: right;">
+            <i class="fas fa-bars ouvrir"></i>
+            <i class="fas fa-times fermer"></i>
         </div>
-    
+        <ul class="d-flex flex-wrap menu_smart">
+            <!-- pages du menu -->
+            <a href="home.php?page=0">
+                <i class="fas fa-home"></i>Accueil
+            </a>
+            <a href="home.php?page=1">
+                <i class="fas fa-user-tie"></i>Professeur
+            </a>
+            <a href="home.php?page=2">
+                <i class="fas fa-user-graduate"></i>Etudiant
+            </a>
+            <a href="home.php?page=3">
+                <i class="fas fa-chair"></i>Classe
+            </a>
+            <a href="home.php?page=4">
+                <i class="fas fa-book-reader"></i>Matière
+            </a>
+            <a href="deconnexion.php">
+                <i class="fas fa-sign-out-alt"></i>Déconnexion
+            </a>
+        </ul>
+    </div>
+    <!-- fin menu smart -->
+    <div class="navigation_navbar">
+        <div class="d-flex justify-content-evenly onglets">
+            <a href="home.php?page=0">
+                <img src="images/logo.png" />
+            </a>
+            <a href="home.php?page=0">
+                <i class="fas fa-home"></i>Accueil
+            </a>
+            <a href="home.php?page=1">
+                <i class="fas fa-user-tie"></i>Professeur
+            </a>
+            <a href="home.php?page=2">
+                <i class="fas fa-user-graduate"></i>Etudiant
+            </a>
+            <a href="home.php?page=3">
+                <i class="fas fa-chair"></i>Classe
+            </a>
+            <a href="home.php?page=4">
+                <i class="fas fa-book-reader"></i>Matière
+            </a>
+            <a href="deconnexion.php">
+                <i class="fas fa-sign-out-alt"></i>Déconnexion
+            </a>
+        </div>
+    </div>
+
     <center>
 
         <h1>Bienvenue sur notre site sur le CFA</h1>
@@ -117,8 +117,17 @@ require_once('./fonctions/fonctions.php')
                 break;
         }
         ?>
-        <img class="img_accueil" style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px;" src="images/background_tree.jpeg" height="600" width="auto">
+
+        <img class="img_accueil" style="object-fit: cover; background-color: black; padding: 10px; border-radius: 15px; margin-bottom: 30px;" src="images/background_tree.jpeg">
+<br />
+        <p>
+            Bienvenue dans le site du CFA INSTA. Créé en 2009 par Ryad Lebib et Hubert
+            </br>Trapet,le CFA INSTA accueille et forme près de 600 étudiant(e)s par an pour leur assurer
+            </br>un avenir professionnel. Venez nous voir, nous serons ravis de vous accueillir et de vous rendre service.
+            </br>
+        </p>
     </center>
+
     <footer class="responsive_footer" style="margin-top: 30px;">
         <div class="d-flex justify-content-evenly">
             <div>
