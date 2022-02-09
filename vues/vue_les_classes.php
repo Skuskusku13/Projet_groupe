@@ -30,10 +30,10 @@
             echo "<td class='text-center align-middle'>" . $uneClasse['nbEtudiants'] . "</td>";
             if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
             echo "<td class='text-center align-middle'>";
-            echo "<a href='index.php?page=3&action=sup&idclasse=" . $uneClasse['idclasse'] . "'>";
+            echo "<a href='home.php?page=3&action=sup&idclasse=" . $uneClasse['idclasse'] . "'>";
             echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
             echo "</a>";
-            echo "<a href='index.php?page=3&action=edit&idclasse=" . $uneClasse['idclasse'] . "'>";
+            echo "<a href='home.php?page=3&action=edit&idclasse=" . $uneClasse['idclasse'] . "'>";
             echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
             echo "</a>";
             echo "</td>";

@@ -37,7 +37,7 @@ if (isset($_GET['action']) && isset($_GET['idprofesseur'])){
         {
             updateProfesseur($_POST);
 
-            header("Location: index.php?page=1");
+            header("Location: home.php?page=1");
         }
         if (isset($_POST['Valider']))
         {

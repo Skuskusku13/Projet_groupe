@@ -27,7 +27,7 @@ $lesClasses = selectAllClasses();
     {
         updateClasse($_POST);
 
-        header("Location: index.php?page=3");
+        header("Location: home.php?page=3");
     }
         if (isset($_POST['Valider']))
         {

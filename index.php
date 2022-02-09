@@ -16,438 +16,48 @@ require_once("fonctions/fonctions.php");
     <!-- cdn fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="style1.css">
     <style>
-        /* media queries / et navbar_smart  */
 
-
-        .container_navbar_smart {
-            display: none;
-        }
-
-        .navigation_navbar {
-            background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
-            color: black;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 0;
-            font-weight: 700;
-        }
-
-        .navigation_navbar .onglets a {
-            color: black;
-            text-decoration: none;
-            padding: 0 30px;
-            font-size: 19px;
-            line-height: 110px;
-            vertical-align: middle;
-        }
-
-        .navigation_navbar a i {
-            margin-right: 5px;
-        }
-
-        .navigation_navbar .onglets img {
-            height: 50px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navigation_navbar .onglets a:not(:first-child):hover {
-            background-color: #3F4856;
-            color: #F1F1F1;
-            transition: 0.3s ease-in;
-        }
-
-
-        @media all and (max-width: 1200px) {
-
-            .img_accueil {
-                width: 300px;
-            }
-
-            .en_tete {
-                margin: 50px;
-            }
-
-            .navigation_navbar {
-                display: none;
-            }
-
-            .container_navbar_smart {
-                display: block;
-                width: 100%;
-                background-color: #74A7E9;
-                height: 100px;
-                z-index: 100;
-                min-width: 360px;
-                font-size: 1.5rem;
-            }
-
-            .container_navbar_smart ul {
-                z-index: 1;
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-            }
-
-            .container_navbar_smart ul a {
-                padding: 20px;
-            }
-
-            .container_navbar_smart ul a:first-child {
-                margin-top: 90px;
-                padding: 20px;
-            }
-
-            .container_navbar_smart img {
-                position: relative;
-                margin: 22px 5px;
-                line-height: 100px;
-                vertical-align: middle;
-                z-index: 120;
-            }
-
-            .container_navbar_smart ul a {
-                text-decoration: none;
-                font-weight: 700;
-                color: #fff;
-            }
-
-            .container_navbar_smart i {
-                position: absolute;
-                font-size: 3rem;
-                right: 5px;
-                top: 0;
-                cursor: pointer;
-                color: #fff;
-                z-index: 100;
-            }
-
-            .toggle_burger i {
-                position: relative;
-                margin: 0 20px;
-                line-height: 100px;
-                vertical-align: middle;
-            }
-
-            .ouvrir {
-                display: block;
-                z-index: 100;
-            }
-
-            .fermer {
-                display: none;
-            }
-
-            .open .ouvrir {
-                display: none;
-            }
-
-            .open .fermer {
-                display: block;
-            }
-
-            .menu_smart {
-                position: absolute;
-                transform: translateX(-100%);
-                transition: 0.5s ease-in-out;
-                width: 100%;
-                height: 100vh;
-                background-color: #74A7E9;
-                z-index: -1;
-            }
-
-            .open .menu_smart {
-                transform: translateX(0);
-            }
-
-            .menu_smart i {
-                display: none;
-            }
-
-            .responsive_footer li,
-            .responsive_footer a {
-                font-size: 0.7em;
-            }
-        }
-
-        /* fin des media et navbar  */
-
-        @font-face {
-            font-family: 'Roboto Mono', monospace;
-            ;
-            src: url("fonts/RobotoMono.ttf");
-        }
-
-        body {
-            background: linear-gradient(180deg, rgba(34, 147, 195, 1) 27%, rgba(45, 253, 235, 0.9626225490196079) 100%);
-            color: #F1F1F1;
-            background-repeat: no-repeat;
-            font-family: 'Roboto Mono', monospace;
-            min-width: 360px;
-            height: 100%;
-        }
-
-        h1 {
-            padding-top: 70px;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        ul a {
-            text-decoration: none;
-            color: black;
-        }
-
-        /* media queries des tables  */
-
-        @media all and (min-width: 1036px) {
-            .table_inline_flex {
-                margin-right: 50px;
-                font-size: 1.1em;
-            }
-
-            .table_insert {
-                width: 600px;
-            }
-
-            footer {
-                max-height: 150px;
-                /*position: absolute;*/
-                bottom: 0;
-                width: 100%;
-                color: black;
-                background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
-                padding: 10px 0;
-                font-weight: 700;
-            }
-
-            .table_connexion {
-                width: 600px;
-                height: 200px;
-            }
-
-        }
-
-        @media all and (max-width: 1035px) {
-            .table_inline_flex {
-                margin: 0 10px;
-                font-size: 0.7em;
-                word-break: break-word;
-            }
-
-            .table_insert {
-                width: 300px;
-            }
-
-            footer {
-                word-wrap: break-word;
-                max-height: 150px;
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                color: black;
-                background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
-                padding: 10px 0;
-                font-weight: 700;
-                font-size: 0.6em;
-            }
-
-            .table_connexion {
-                width: 400px;
-                height: 200px;
-            }
-        }
-
-        @media all and (max-width: 580px) {
-            .table_inline_flex {
-                width: 350px;
-            }
-
-            .table_inline_flex img {
-                display: flex;
-                word-wrap: wrap;
-                margin: 5px 0px 5px 0px;
-            }
-
-            .table_connexion form {
-                width: 300px;
-                height: 200px;
-            }
-        }
-
-        .boutonP {
-            margin: 5px 0;
-            border-radius: 30px;
-            font-family: fantasy;
-            background-color: #3F4856;
-            color: #F1F1F1;
-            width: 120px;
-            padding: 3px;
-            box-shadow: 3px 3px #5D79A5;
-        }
-
-        .boutonP:first-child {
-            margin-left: 30px;
-        }
     </style>
 </head>
 
 <body>
     <center>
-        <h1>Bienvenue sur notre site sur le CFA</h1>
-        <!-- menu smart -->
-        <?php
-        if (!isset($_SESSION['email'])) { // si il n'y a pas de session
-            require_once("connexion.php");
-        }
-        if (isset($_POST['seConnecter'])) {
-            $email = $_POST['email'];
-            $unUser = selectUser($email);
-            // var_dump($unUser);
-            if ($unUser == null) {
-                echo "Veuillez vérifier vos identifiants !";
-            } else {
-                echo "Bienvenue " . $unUser['nom'] . " " . $unUser['prenom'];
-                // creation de la session 
-                $_SESSION['email'] = $unUser['email'];
-                $_SESSION['nom'] = $unUser['nom'];
-                $_SESSION['prenom'] = $unUser['prenom'];
-                $_SESSION['role'] = $unUser['role'];
-                // on recharge la page vers le home
-            }
-        }
-        if (isset($_SESSION['email'])) {
-            echo '
 
-    <div class="container_navbar_smart">
-        <div style="float: left;">
-            <a href="index.php?page=0">
-                <img style="height: 60px;" src="images/logo.png" />
-            </a>
-        </div>
+        <!-- index.php === connexion 
+        etape 1 : formulaire de connexion dans ce formulaire, 2input email + mdp et submit 
+        etape 2 : faire le php et controler si mes input correspondent au valeurs de la table user
+         Pour faire la fonction : 
+            1. pour eviter toutes les erreurs, controler si le bouton est appuer ou pas (if)
+            2. recuperer les input avec les $name
+            3. controler si les champs ont été rempli (if)
+            4. avec une requete selectionner les admins
+            5. definir variable de session (mail, mdp) = UnUser de $email
+            6. refaire un controle si $name est = a la $_SESSION['email'] 
+            7. autoriser l'accès et faire une redirection avec header(location) vers home.php si c'est pas bon il reste dans index.php avec petit mot, identifiants incorrect
+-->
 
-        <div class="toggle_burger" style="float: right;">
-            <i class="fas fa-bars ouvrir"></i>
-            <i class="fas fa-times fermer"></i>
-        </div>
+        <h2>Connexion au site du CFA</h2><br />
 
-        <ul class="d-flex flex-wrap menu_smart">
-            <!-- pages du menu -->
-            <a href="index.php?page=0">
-                <i class="fas fa-home"></i>Accueil
-            </a>
-            <a href="index.php?page=1">
-                <i class="fas fa-user-tie"></i>Professeur
-            </a>
-            <a href="index.php?page=2">
-                <i class="fas fa-user-graduate"></i>Etudiant
-            </a>
-            <a href="index.php?page=3">
-                <i class="fas fa-chair"></i>Classe
-            </a>
-            <a href="index.php?page=4">
-                <i class="fas fa-book-reader"></i>Matière
-            </a>
-            <a href="index.php?page=5">
-                <i class="fas fa-sign-out-alt"></i>Déconnexion
-            </a>
-        </ul>
-    </div>
-    <!-- fin menu smart -->
-
-
-    <div class="navigation_navbar">
-        <div class="d-flex justify-content-evenly onglets">
-            <a href="index.php?page=0">
-                <img src="images/logo.png" />
-            </a>
-            <a href="index.php?page=0">
-                <i class="fas fa-home"></i>Accueil
-            </a>
-            <a href="index.php?page=1">
-                <i class="fas fa-user-tie"></i>Professeur
-            </a>
-            <a href="index.php?page=2">
-                <i class="fas fa-user-graduate"></i>Etudiant
-            </a>
-            <a href="index.php?page=3">
-                <i class="fas fa-chair"></i>Classe
-            </a>
-            <a href="index.php?page=4">
-                <i class="fas fa-book-reader"></i>Matière
-            </a>
-            <a href="index.php?page=5">
-                <i class="fas fa-sign-out-alt"></i>Déconnexion
-            </a>
-
-        </div>
-    </div> ';
-
-            if (isset($_GET["page"])) {
-                $page = $_GET["page"];
-            } else {
-                $page = 0;
-            }
-            switch ($page) {
-                case 0:
-                    require_once("home.php");
-                    break;
-                case 1:
-                    require_once("g_professeur.php");
-                    break;
-                case 2:
-                    require_once("g_etudiant.php");
-                    break;
-                case 3:
-                    require_once("g_classe.php");
-                    break;
-                case 4:
-                    require_once("g_matiere.php");
-                    break;
-                case 5: // deconnexion suppression de la connexion  
-                    session_destroy();
-                    header("Location: index.php"); // recharger la page 
-                    break;
-            }
-        }
-        ?>
-
+        <form method="post" action="">
+            <h3>MERCI DE VOUS CONNECTER AVANT DE RENTER SUR NOTRE SITE</h2>
+                <table class="table table-striped table-hover table_connexion" border="4" style="box-shadow: 10px 5px 5px black; border-color: black; margin: 50px auto;">
+                    <tr>
+                        <td class="font-weight-bold text-center align-middle">Email : </td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold text-center align-middle">MDP : </td>
+                        <td><input type="password" name="mdp"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle"><input class="boutonP" type="reset" name="Annuler" value="Annuler"></td>
+                        <td class="text-center align-middle"><input class="boutonP" type="submit" name="seConnecter" value="Valider"></td>
+                    </tr>
+                </table>
+        </form>
     </center>
-    <footer class="responsive_footer" style="margin-top: 30px;">
-        <div class="d-flex justify-content-evenly">
-            <div>
-                <p class="text-center">Coryright©
-                <ul>
-                    <li>Groupe info cfa 2022 ;)</li>
-                </ul>
-                </p>
-            </div>
-            <div>
-                <p class="text-center">Contact par mail :
-                <ul>
-                    <li><a href="mailto:d.levy@cfa-insta.fr">d.levy@cfa-insta.fr</a></li>
-                    <li><a href="mailto:a.akilal@cfa-insta.fr">a.akilal@cfa-insta.fr</a></li>
-                </ul>
-                </p>
-            </div>
-            <div>
-                <p class="text-center">Contact par téléphone :
-                <ul>
-                    <li><a href="tel:+33781267866">Dan LEVY</a></li>
-                    <li><a href="tel:+33605743353">Amazigh AKILAL</a></li>
-                </ul>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- insertion de notre javascript -->
-    <script type="text/javascript" src="js/script1.js"></script>
 </body>
 
 </html>

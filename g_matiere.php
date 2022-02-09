@@ -34,7 +34,7 @@
         {
             updateMatiere($_POST);
 
-            header("Location: index.php?page=4");
+            header("Location: home.php?page=4");
         }
         if (isset($_POST['Valider']))
         {

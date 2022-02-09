@@ -29,15 +29,15 @@
             echo "<td class='text-center align-midlle'>";
              if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
-            echo "<a href='index.php?page=1&action=sup&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
+            echo "<a href='home.php?page=1&action=sup&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
             echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
             echo "</a>";
-            echo "<a href='index.php?page=1&action=edit&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
+            echo "<a href='home.php?page=1&action=edit&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
             echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
             echo "</a>";
              }
 
-            echo "<a href='index.php?page=1&action=matiere&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
+            echo "<a href='home.php?page=1&action=matiere&idprofesseur=" . $unProfesseur['idprofesseur'] . "'>";
             echo "<img src = 'images/matiere.png' height = '30' width = '30' style='object-fit: cover;'> ";
             echo "</a>";
 

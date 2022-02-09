@@ -39,7 +39,7 @@
         {
             updateEtudiant($_POST);
 
-            header("Location: index.php?page=2");
+            header("Location: home.php?page=2");
         }
         if (isset($_POST['Valider']))
         {
