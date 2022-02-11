@@ -165,13 +165,18 @@
     src: url("fonts/RobotoMono.ttf");
 }
 
+.form_connex{
+    height: 100vh;
+}
+
 body {
     background: linear-gradient(180deg, rgba(34, 147, 195, 1) 27%, rgba(45, 253, 235, 0.9626225490196079) 100%);
+    background-size: cover;
     color: #F1F1F1;
     background-repeat: no-repeat;
     font-family: 'Roboto Mono', monospace;
     min-width: 360px;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -210,13 +215,13 @@ ul a {
         font-weight: 700;
     }
 
+    .img_accueil {
+        height: 600px;
+    }
+
     .table_connexion {
         width: 600px;
         height: 200px;
-    }
-
-    .img_accueil {
-        height: 600px;
     }
 }
 

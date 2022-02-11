@@ -43,7 +43,7 @@ require_once("fonctions/fonctions.php");
 
         <h2>Connexion au site du CFA</h2><br />
 
-        <form method="post" action="">
+        <form method="post" action="" class="form_connex">
             <h3>MERCI DE VOUS CONNECTER AVANT DE RENTER SUR NOTRE SITE</h2>
                 <table class="table table-striped table-hover table_connexion" border="4" style="box-shadow: 10px 5px 5px black; border-color: black; margin: 50px auto;">
                     <tr>
@@ -70,7 +70,7 @@ require_once("fonctions/fonctions.php");
                     $_SESSION['email'] = $unUser['email'];
                     $_SESSION['motdepasse'] = $unUser['mdp'];
                     $_SESSION['role'] = $unUser['role'];
-                    if($_SESSION['email'] == $email && $_SESSION['motdepasse'] == $mdp){
+                    if($_SESSION['email'] == $email && $_SESSION['motdepasse'] == $mdp && $_SESSION['role'] == $role){
                         header("Location: home.php");
                     } else{
                         echo "Veuillez verifier vos identifiants !";
@@ -78,7 +78,7 @@ require_once("fonctions/fonctions.php");
                 } else {
                     echo "Les champs ne sont pas remplis";
                 }
-            }
+            } 
         ?>
     </center>
 </body>

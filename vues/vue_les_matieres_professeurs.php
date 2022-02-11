@@ -1,5 +1,5 @@
 <div style="width: 90%;">
-    <table class="table table-striped table-hover" border="4" style="box-shadow: 10px 5px 5px black; border-color: black;">
+    <table class="table table-striped table-hover table_inline_flex" border="4" style="box-shadow: 10px 5px 5px black; border-color: black;">
         <tr>
             <td class="font-weight-bold text-center align-midlle"> Id Matiere</td>
             <td class="font-weight-bold text-center align-midlle"> Nom Matière</td>
@@ -21,4 +21,4 @@
         }
         ?>
     </table>
-</div>
+</div> <br />
