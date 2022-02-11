@@ -150,11 +150,6 @@
     .menu_smart i {
         display: none;
     }
-
-    .responsive_footer li,
-    .responsive_footer a {
-        font-size: 0.7em;
-    }
 }
 
 /* fin des media et navbar  */
@@ -246,7 +241,6 @@ ul a {
         background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
         padding: 10px 0;
         font-weight: 700;
-        font-size: 0.6em;
     }
 
     .table_connexion {
