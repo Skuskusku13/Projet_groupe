@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (isset($_SESSION['email']) == null) {
+    header('Location: index.php');
+    exit;
+}
 require_once('./fonctions/fonctions.php')
 ?>
 
@@ -80,16 +85,17 @@ require_once('./fonctions/fonctions.php')
 
     <center>
 
-        <h1>Bienvenue sur notre site sur le CFA</h1>
-
-        <h3 style="font-size: 26px;">Accueil du site</h3>
-
         <h4>
             <?php
             echo 'Bienvenue ' . $_SESSION['nom'] . " " . $_SESSION['prenom'];
             echo '<br /><br /> Vous avez le rôle : ' . $_SESSION['role'];
             ?>
         </h4>
+
+        <h1>Bienvenue sur notre site sur le CFA</h1>
+
+        <h3 style="font-size: 26px;">Accueil du site</h3>
+        <?php echo "<h3>" . $_SESSION['email'] . "</h3>" ?>
 
         <!-- menu smart -->
 

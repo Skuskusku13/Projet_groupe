@@ -20,7 +20,7 @@
              <?php if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
                     echo "<td class='text-center align-midlle'> Opérations</td>";
                      }
-                    ?>home
+                    ?>
         </tr>
         <?php
         foreach ($lesMatieres as $uneMatiere) {
