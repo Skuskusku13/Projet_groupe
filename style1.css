@@ -264,6 +264,17 @@ ul a {
         width: 300px;
         height: 200px;
     }
+    footer {
+        word-wrap: break-word;
+        max-height: 150px;
+        /* position: absolute; */
+        bottom: 0;
+        width: 100%;
+        color: black;
+        background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
+        padding: 10px 0;
+        font-weight: 700;
+    }
 }
 
 .boutonP {
