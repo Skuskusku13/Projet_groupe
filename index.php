@@ -1,6 +1,6 @@
 <?php
 session_start(); // demarrage de la session
-if(isset($_SESSION['email'])){
+if (isset($_SESSION['email'])) {
     header('Location: home.php');
     exit;
 }
@@ -58,28 +58,28 @@ require_once("fonctions/fonctions.php");
                         <td class="text-center align-middle"><input class="boutonP" type="reset" name="Annuler" value="Annuler"></td>
                         <td class="text-center align-middle"><input class="boutonP" type="submit" name="seConnecter" value="Valider"></td>
                     </tr>
+                    <?php
+                    if (isset($_POST['seConnecter'])) {
+                        if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
+                            $email = $_POST['email'];
+                            $mdp = $_POST['mdp'];
+                            $unUser = selectUser($email);
+                            // var_dump($unUser);
+                            $_SESSION['email'] = $unUser['email'];
+                            $_SESSION['mdp'] = $unUser['mdp'];
+                            $_SESSION['role'] = $unUser['role'];
+                            if ($_SESSION['email'] == $email && $_SESSION['mdp'] == $mdp) {
+                                header("Location: home.php");
+                            } else {
+                                echo "Veuillez verifier vos identifiants !";
+                            }
+                        } else {
+                            echo "Les champs ne sont pas remplis";
+                        }
+                    }
+                    ?>
                 </table>
         </form>
-        <?php
-            if(isset($_POST['seConnecter'])){
-                if(!empty($_POST['email']) && !empty($_POST['mdp'])){
-                    $email = $_POST['email'];
-                    $mdp = $_POST['mdp'];
-                    $unUser = selectUser($email);
-                    // var_dump($unUser);
-                    $_SESSION['email'] = $unUser['email'];
-                    $_SESSION['motdepasse'] = $unUser['mdp'];
-                    $_SESSION['role'] = $unUser['role'];
-                    if($_SESSION['email'] == $email && $_SESSION['motdepasse'] == $mdp && $_SESSION['role'] == $role){
-                        header("Location: home.php");
-                    } else{
-                        echo "Veuillez verifier vos identifiants !";
-                    }
-                } else {
-                    echo "Les champs ne sont pas remplis";
-                }
-            } 
-        ?>
     </center>
 </body>
 
