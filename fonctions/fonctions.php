@@ -1,8 +1,8 @@
 <?php 
      function connexion ()
      {
-        $con = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250"); 
-        //$con = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
+        //$con = mysqli_connect("localhost:8889","root", "root", "groupe_cfa_250"); 
+        $con = mysqli_connect("localhost", "root", "", "groupe_cfa_250");
         if ($con == null)
         {
             echo "Erreur de connexion à la bdd";
