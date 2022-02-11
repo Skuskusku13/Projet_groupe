@@ -17,7 +17,7 @@
     } 
 }
 
-    // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+    if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
        
         if (isset($_GET['action']) && isset($_GET['idetudiant'])){
             $action = $_GET['action'];
@@ -39,13 +39,13 @@
         {
             updateEtudiant($_POST);
 
-            header("Location: index.php?page=2");
+            header("Location: home.php?page=2");
         }
         if (isset($_POST['Valider']))
         {
             insertEtudiant($_POST);
         }
-   // }
+    }
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

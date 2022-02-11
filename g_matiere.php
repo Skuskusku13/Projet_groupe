@@ -15,7 +15,7 @@
     $idmatiere = $_GET['idmatiere'];
 }
 
-    // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+     if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
        
         if (isset($_GET['action']) && isset($_GET['idmatiere'])){
             $action = $_GET['action'];
@@ -34,13 +34,13 @@
         {
             updateMatiere($_POST);
 
-            header("Location: index.php?page=4");
+            header("Location: home.php?page=4");
         }
         if (isset($_POST['Valider']))
         {
             insertMatiere($_POST);
         }
-   // }
+    }
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

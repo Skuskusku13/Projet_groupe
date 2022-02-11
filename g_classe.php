@@ -8,7 +8,7 @@
 $laClasse = null;
 $lesClasses = selectAllClasses();
 
-// if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+ if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
  
     if (isset($_GET['action']) && isset($_GET['idclasse'])){
         $action = $_GET['action'];
@@ -27,13 +27,13 @@ $lesClasses = selectAllClasses();
     {
         updateClasse($_POST);
 
-        header("Location: index.php?page=3");
+        header("Location: home.php?page=3");
     }
         if (isset($_POST['Valider']))
         {
             insertClasse($_POST);
         }
-// } 
+ } 
     if (isset($_POST['Rechercher']))
     {
         $mot = $_POST['mot'];

@@ -31,16 +31,16 @@
             echo "<td class='text-center align-midlle'>" . $unEtudiant['tel'] . "</td>";
             echo "<td class='text-center align-midlle'>" . $unEtudiant['idclasse'] . "</td>";
             echo "<td class='text-center align-midlle'>";
-            // if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
+            if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
-            echo "<a href='index.php?page=2&action=sup&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
+            echo "<a href='home.php?page=2&action=sup&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
             echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
             echo "</a>";
-            echo "<a href='index.php?page=2&action=edit&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
+            echo "<a href='home.php?page=2&action=edit&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
             echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
             echo "</a>";
-            // }
-            echo "<a href='index.php?page=2&action=classe&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
+             }
+            echo "<a href='home.php?page=2&action=classe&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
             echo "<img src = 'images/classe.png' height = '30' width = '30' style='object-fit: cover;'> ";
             echo "</a>";
             echo "</td>";
@@ -48,4 +48,4 @@
         }
         ?>
     </table>
-</div>
+</div> <br />
