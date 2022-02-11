@@ -131,7 +131,7 @@ require_once('./fonctions/fonctions.php')
     </center>
 
     <footer class="responsive_footer" style="margin-top: 30px;">
-        <div class="d-flex justify-content-evenly">
+        <div class="d-flex justify-content-evenly respon_li">
             <div>
                 <p class="text-center">Coryright©
                 <ul>
@@ -144,6 +144,7 @@ require_once('./fonctions/fonctions.php')
                 <ul>
                     <li><a href="mailto:d.levy@cfa-insta.fr">d.levy@cfa-insta.fr</a></li>
                     <li><a href="mailto:a.akilal@cfa-insta.fr">a.akilal@cfa-insta.fr</a></li>
+                    <li><a href="mailto:m.guendouzi@cfa-insta.fr">m.guendouzi@cfa-insta.fr</a></li>
                 </ul>
                 </p>
             </div>
@@ -152,6 +153,7 @@ require_once('./fonctions/fonctions.php')
                 <ul>
                     <li><a href="tel:+33781267866">Dan LEVY</a></li>
                     <li><a href="tel:+33605743353">Amazigh AKILAL</a></li>
+                    <li><a href="tel:+33767669505">Mehdi GUENDOUZI</a></li>
                 </ul>
                 </p>
             </div>
