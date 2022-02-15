@@ -200,7 +200,7 @@ ul a {
     }
 
     footer {
-        max-height: 150px;
+        height: auto;
         /* position: absolute;  */
         bottom: 0;
         width: 100%;
@@ -208,6 +208,12 @@ ul a {
         background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
         padding: 10px 0;
         font-weight: 700;
+    }
+
+    .responsive_footer ul li, 
+    .responsive_footer a,
+    .responsive_footer p{
+        font-size: 1em;
     }
 
     .img_accueil {
@@ -221,6 +227,13 @@ ul a {
 }
 
 @media all and (max-width: 1035px) {
+
+    .responsive_footer ul li, 
+    .responsive_footer a,
+    .responsive_footer p{
+        font-size: 0.7em;
+    }
+
     .table_inline_flex {
         margin: 0 10px;
         font-size: 0.7em;
@@ -274,6 +287,12 @@ ul a {
         background: radial-gradient(circle, rgba(128, 188, 238, 1) 0%, rgba(77, 114, 230, 1) 100%);
         padding: 10px 0;
         font-weight: 700;
+    }
+
+    .responsive_footer ul li, 
+    .responsive_footer a,
+    .responsive_footer p{
+        font-size: 0.7em;
     }
 }
 
