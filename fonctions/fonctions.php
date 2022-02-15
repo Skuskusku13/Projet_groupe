@@ -217,7 +217,7 @@ function countEtudiants (){
 
 function selectClassesEtudiants ($idetudiant)
     {
-        $requete = "select * from classe where idetudiant=".$idetudiant;
+        $requete = "select * from etudiant where idclasse=".$idetudiant;
         $con = connexion ();
         if ($con)
         {
