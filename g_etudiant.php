@@ -5,7 +5,7 @@
 
 <?php
 
- $lesEtudiants = selectAllClasses();
+ $lesEtudiants = null;
  $lEtudiant = null;
  $lesClasses = selectAllClasses();
  // var_dump($lesClasses);

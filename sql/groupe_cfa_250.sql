@@ -77,7 +77,7 @@ insert into professeur values (null, "SEDIKHI", "J.Philippe", "Sedh@gmail.com", 
 /******** matiere *********/
 insert into matiere values (null, "Info", 4, 8, 2, 2);
 insert into matiere values (null, "Maths", 2, 2, 4, 1);
-insert into matiere values (null, "Français ", 1, 2, 3, 3);
+insert into matiere values (null, "Français", 1, 2, 3, 3);
 insert into matiere values (null, "AEMJSI", 3, 3, 4, 4);
 
 /******** admin et user *********/
