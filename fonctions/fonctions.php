@@ -252,7 +252,7 @@ function selectAllProfesseurs (){
 /***** fonction 2 ******/
 
 function insertProfesseur ($tab){
-    $requete = "insert into professeur values(null,'".$tab['nom']."','".$tab['prenom']."', '".$tab['email']."', '".$tab['mdp']."', '".$tab['tel']."');" ; //, 
+    $requete = "insert into professeur values(null,'".$tab['nom']."','".$tab['prenom']."', '".$tab['email']."', '".$tab['mdp']."', '".$tab['tel']."');" ; 
     // echo $requete;
     $con = connexion ();
     if ($con)
