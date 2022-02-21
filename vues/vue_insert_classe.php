@@ -26,6 +26,20 @@
                 <input type="text" name="nbEtudiants" value="<?php if($laClasse != null) echo $laClasse['nbEtudiants']; ?>">
             </td>
         </tr>
+        <tr>
+            <td class="align-middle text-center">Id Classe Etudiant :</td>
+            <td>
+            <select name="idclasse">
+                    <?php
+                        foreach ($lesClasses as $uneClasse){
+                            echo "<option value='".$uneClasse['idclasse']."'>";
+                            echo $uneClasse['idclasse']."-- ".$uneClasse['nomClasse']."  ".$uneClasse['salle'];
+                            echo "</option>";
+                        }
+                    ?>
+                </select>
+            </td>
+        </tr>
         <?php 
             if ($laClasse != null) echo "<input type='hidden' name='idclasse' value = '".$laClasse['idclasse']."' >";
         ?>
