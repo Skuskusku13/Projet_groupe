@@ -37,9 +37,9 @@ if (isset($_SESSION['email']) and $_SESSION['role'] == "admin") {
     require_once("vues/vue_insert_etudiant.php");
     if (isset($_POST['Modifier'])) {
         updateEtudiant($_POST);
-
         header("Location: home.php?page=2");
     }
+
     if (isset($_POST['Valider'])) {
         insertEtudiant($_POST);
     }
@@ -54,9 +54,8 @@ if (isset($_POST['Rechercher'])) {
 require_once("vues/vue_les_etudiants.php");
 
 echo "<br /> <br />";
-    if ($lesClasses != null)
-    {
-        echo "<h2>Listes des classes de l'étudiant : </h2>";
-        require_once ("vues/vue_les_classes_etudiants.php");
-    }
+if ($lesClasses != null) {
+    echo "<h2>Listes des classes de l'étudiant : </h2>";
+    require_once("vues/vue_les_classes_etudiants.php");
+}
 ?>

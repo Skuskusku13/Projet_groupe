@@ -23,20 +23,20 @@
         <?php
         foreach ($lesEtudiants as $unEtudiant) {
             echo "<tr>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['idetudiant'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['nom'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['prenom'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['adresse'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['email'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['tel'] . "</td>";
-            echo "<td class='text-center align-midlle'>" . $unEtudiant['idclasse'] . "</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['idetudiant']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['nom']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['prenom']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['adresse']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['email']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['tel']."</td>";
+            echo "<td class='text-center align-midlle'>".$unEtudiant['idclasse']."</td>";
             echo "<td class='text-center align-midlle'>";
             if(isset($_SESSION['email']) and $_SESSION['role'] == "admin"){
 
-            echo "<a href='home.php?page=2&action=sup&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
+            echo "<a href='home.php?page=2&action=sup&idetudiant=".$unEtudiant['idetudiant']."'>";
             echo "<img src = 'images/delete.png' height = '30' width = '30'> ";
             echo "</a>";
-            echo "<a href='home.php?page=2&action=edit&idetudiant=" . $unEtudiant['idetudiant'] . "'>";
+            echo "<a href='home.php?page=2&action=edit&idetudiant=".$unEtudiant['idetudiant']."'>";
             echo "<img src = 'images/edit.png' height = '30' width = '30'> ";
             echo "</a>";
              }
